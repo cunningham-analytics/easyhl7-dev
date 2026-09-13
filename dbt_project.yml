@@ -19,10 +19,19 @@ models:
 
     v2_1:
       +database: v2_1
+      +tags:
+        - v2_1
       
       oru:
         r01:
           +schema: oru_r01
+          +tags:
+            - oru_r01
+      orm:
+        o01:
+          +schema: orm_o01
+          +tags:
+            - orm_o01
 
 seeds:
   easyhl7_dev:
