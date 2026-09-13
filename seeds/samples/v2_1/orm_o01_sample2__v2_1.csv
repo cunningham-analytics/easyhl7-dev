@@ -1,0 +1,10 @@
+message
+"MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260913143000||ORM^O01|ORM00002|P|2.1
+PID|1||PAT002||JONES^ROBERT||19750410|M
+PV1|1|O|CLINIC^202^B
+OBR|1|ORD101||CBC^Complete Blood Count
+ORC|NW|ORD101
+NTE|1||Patient fasting at time of collection
+OBR|1|ORD102||CMP^Comprehensive Metabolic Panel
+ORC|NW|ORD102
+DG1|1||R53.83^Other fatigue"
