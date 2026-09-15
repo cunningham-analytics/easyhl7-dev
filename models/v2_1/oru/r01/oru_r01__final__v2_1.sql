@@ -27,15 +27,15 @@ select
     obs.obx ->> '6' as units,
     obs.nte
 
-from {{ ref('oru_r01__patient') }} p
+from {{ ref('oru_r01__patient__v2_1') }} p
 
-left join {{ ref('oru_r01__visit') }} v
+left join {{ ref('oru_r01__visit__v2_1') }} v
     on p.msg_control_id = v.msg_control_id
     and p.patient_seq = v.patient_seq
 
-left join {{ ref('oru_r01__order_observation') }} o
+left join {{ ref('oru_r01__order_observation__v2_1') }} o
     on p.msg_control_id = o.msg_control_id
 
-left join {{ ref('oru_r01__observation') }} obs
+left join {{ ref('oru_r01__observation__v2_1') }} obs
     on o.msg_control_id = obs.msg_control_id
     and o.order_observation_seq = obs.order_observation_seq
