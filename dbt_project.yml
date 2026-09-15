@@ -18,26 +18,25 @@ models:
   easyhl7_dev:
 
     v2_1:
-      +database: v2_1
-      +tags:
-        - v2_1
-      
       oru:
         r01:
           +schema: oru_r01
-          +tags:
-            - oru_r01
       orm:
         o01:
           +schema: orm_o01
-          +tags:
-            - orm_o01
+
+    v2_2:
+      oru:
+        r01:
+          +schema: oru_r01
+      orm:
+        o01:
+          +schema: orm_o01
 
 seeds:
   easyhl7_dev:
     samples:
       v2_1:
-        +schema: raw
-
+        +schema: raw_v2_1
       v2_2:
-        +schema: raw
+        +schema: raw_v2_2
