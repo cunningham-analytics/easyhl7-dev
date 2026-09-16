@@ -1,0 +1,15 @@
+message
+"MSH|^~\&|LAB|HOSPITAL|EASYHL7|TEST|20260916120000||ORU^R01|ORU231001|P|2.3.1
+PID|1||PAT23101||SMITH^MICHAEL||19880615|M
+NTE|1||Patient-level note
+PV1|1|O|CLINIC^101^A
+PV2|||Follow-up visit
+ORC|RE|ORD23101
+OBR|1|ORD23101|LAB23101|CBC^Complete Blood Count
+NTE|1||CBC order note
+OBX|1|NM|HGB^Hemoglobin||14.2|g/dL
+NTE|1||Hemoglobin observation note
+OBX|2|NM|WBC^White Blood Cell||7.1|10^9/L
+ORC|RE|ORD23102
+OBR|1|ORD23102|LAB23102|BMP^Basic Metabolic Panel
+OBX|1|NM|GLU^Glucose||95|mg/dL"
