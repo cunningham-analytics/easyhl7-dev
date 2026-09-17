@@ -1,14 +1,61 @@
 message
-"MSH|^~\&|LAB|HOSPITAL|EASYHL7|TEST|20260915130000||ORU^R01|ORU220001|P|2.2
+"MSH|^~\&|LABAPP|HOSPITAL|EASYHL7|TEST|20260917100000||ORU^R01|ORU22001|P|2.2
 PID|1||PAT22001||SMITH^MICHAEL||19880615|M
-NTE|1||Patient-level note
+NTE|1||Patient note one
+NTE|2||Patient note two
 PV1|1|O|CLINIC^101^A
 ORC|RE|ORD22001
-OBR|1|ORD22001|LAB22001|CBC^Complete Blood Count
-NTE|1||CBC order note
-OBX|1|NM|HGB^Hemoglobin||14.2|g/dL
-NTE|1||Hemoglobin observation note
-OBX|2|NM|WBC^White Blood Cell||7.1|10^9/L
+OBR|1|ORD22001||CBC^Complete Blood Count
+NTE|1||CBC order-level note one
+NTE|2||CBC order-level note two
+OBX|1|NM|WBC^White Blood Cell Count||7.2|10^3/uL|4.0-11.0|N|||F
+NTE|1||WBC observation note one
+NTE|2||WBC observation note two
+OBX|2|NM|HGB^Hemoglobin||14.5|g/dL|13.5-17.5|N|||F
 ORC|RE|ORD22002
-OBR|1|ORD22002|LAB22002|BMP^Basic Metabolic Panel
-OBX|1|NM|GLU^Glucose||95|mg/dL"
+OBR|2|ORD22002||BMP^Basic Metabolic Panel
+NTE|1||BMP order-level note
+OBX|1|NM|GLU^Glucose||92|mg/dL|70-99|N|||F
+NTE|1||Glucose observation note
+OBX|2|NM|CREAT^Creatinine||1.0|mg/dL|0.7-1.3|N|||F
+DSC|CONTINUE22001"
+"MSH|^~\&|LABAPP|HOSPITAL|EASYHL7|TEST|20260917110000||ORU^R01|ORU22002|P|2.2
+PID|1||PAT22002||JONES^SARAH||19920320|F
+NTE|1||Patient without visit
+OBR|1|ORD22003||TSH^Thyroid Stimulating Hormone
+OBX|1|NM|TSH^Thyroid Stimulating Hormone||2.1|mIU/L|0.4-4.0|N|||F"
+"MSH|^~\&|LABAPP|HOSPITAL|EASYHL7|TEST|20260917120000||ORU^R01|ORU22003|P|2.2
+OBR|1|ORD22004||CULT^Culture
+NTE|1||Culture order note
+OBX|1|ST|CULTRES^Culture Result||NO GROWTH||||||F
+NTE|1||Culture observation note
+DSC|CONTINUE22003"
+"MSH|^~\&|LABAPP|HOSPITAL|EASYHL7|TEST|20260917130000||ORU^R01|ORU22004|P|2.2
+PID|1||PAT22004||BROWN^DAVID||19751102|M
+PV1|1|I|WARD^202^B
+ORC|RE|ORD22005
+OBR|1|ORD22005||LIPID^Lipid Panel
+OBX|1|NM|CHOL^Cholesterol||180|mg/dL|||||F
+OBX|2|NM|HDL^HDL Cholesterol||55|mg/dL|||||F
+OBX|3|NM|LDL^LDL Cholesterol||105|mg/dL|||||F
+ORC|RE|ORD22006
+OBR|2|ORD22006||A1C^Hemoglobin A1C
+OBX|1|NM|A1C^Hemoglobin A1C||5.4|%|||||F
+ORC|RE|ORD22007
+OBR|3|ORD22007||CRP^C-Reactive Protein
+NTE|1||CRP order note
+OBX|1|NM|CRP^C-Reactive Protein||1.2|mg/L|||||F
+NTE|1||CRP observation note"
+"MSH|^~\&|LABAPP|HOSPITAL|EASYHL7|TEST|20260917140000||ORU^R01|ORU22005|P|2.2
+PID|1||PAT22005||WHITE^EMILY||19950814|F
+NTE|1||Patient boundary note
+PV1|1|O|CLINIC^303^C
+OBR|1|ORD22008||TEST1^First Test
+NTE|1||First order note
+OBX|1|ST|RESULT1^First Result||POSITIVE||||||F
+NTE|1||First observation note
+OBR|2|ORD22009||TEST2^Second Test
+NTE|1||Second order note
+OBX|1|ST|RESULT2^Second Result||NEGATIVE||||||F
+NTE|1||Second observation note
+DSC|CONTINUE22005"
