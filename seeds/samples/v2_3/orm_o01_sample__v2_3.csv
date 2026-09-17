@@ -1,17 +1,112 @@
 message
-"MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260915150000||ORM^O01|ORM230001|P|2.3
+"MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260917100000||ORM^O01|ORM23001|P|2.3
+NTE|1||Message-level note
 PID|1||PAT23001||SMITH^MICHAEL||19880615|M
+PD1|||PRIMARYCARE
+NTE|1||Patient note one
+NTE|2||Patient note two
 PV1|1|O|CLINIC^101^A
 PV2|||Follow-up visit
+IN1|1|PLAN23001|BLUE^Blue Insurance
+IN2|INSURED23001
+IN3|1|CERT23001
+IN1|2|PLAN23002|GREEN^Green Insurance
+IN2|INSURED23002
+IN3|1|CERT23002
+GT1|1||SMITH^JANE
+AL1|1||PEN^Penicillin||RASH
+AL1|2||PEANUT^Peanut||ANAPHYLAXIS
 ORC|NW|ORD23001
 OBR|1|ORD23001||CBC^Complete Blood Count
-NTE|1||Routine laboratory order
-OBX|1|ST|ORDERSTATUS^Order Status||RECEIVED
-NTE|1||Specimen received by laboratory
-OBX|2|ST|PRIORITY^Priority||ROUTINE
+NTE|1||CBC order-detail note one
+NTE|2||CBC order-detail note two
+DG1|1||R53.83^Fatigue
+DG1|2||Z00.00^General examination
+OBX|1|NM|WBC^White Blood Cell Count||7.2|10^3/uL|4.0-11.0|N|||F
+NTE|1||WBC observation note
+OBX|2|NM|HGB^Hemoglobin||14.5|g/dL|13.5-17.5|N|||F
+CTI|TRIAL23001
+BLG|CH
 ORC|NW|ORD23002
-RXO|AMOX500^Amoxicillin 500 MG|500|MG|500|MG|PO
-NTE|1||Take with food
-OBX|1|ST|PHARMSTATUS^Pharmacy Status||PENDING
+RXO|AMOX^Amoxicillin|500|mg
+NTE|1||Medication order-detail note
+DG1|1||J01.90^Acute sinusitis
+OBX|1|ST|MEDSTATUS^Medication Status||PENDING||||||F
+NTE|1||Medication observation note
+CTI|TRIAL23002
+BLG|CH"
+"MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260917110000||ORM^O01|ORM23002|P|2.3
+PID|1||PAT23002||JONES^SARAH||19920320|F
+PD1|||SECONDARYCARE
+IN1|1|PLAN23003|RED^Red Insurance
 ORC|NW|ORD23003
-BLG|CO"
+OBR|1|ORD23003||TSH^Thyroid Stimulating Hormone
+OBX|1|NM|TSH^Thyroid Stimulating Hormone||2.1|mIU/L|0.4-4.0|N|||F"
+"MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260917120000||ORM^O01|ORM23003|P|2.3
+NTE|1||Message without patient
+ORC|NW|ORD23004
+RQD|1|SUPPLY23004|GLOVE^Exam Gloves|2|BX
+NTE|1||Supply order-detail note
+DG1|1||Z01.89^Supply diagnosis
+OBX|1|ST|SUPPLYSTATUS^Supply Status||REQUESTED||||||F
+NTE|1||Supply observation note
+CTI|TRIAL23003
+BLG|CH"
+"MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260917130000||ORM^O01|ORM23004|P|2.3
+PID|1||PAT23004||BROWN^DAVID||19751102|M
+PV1|1|I|WARD^202^B
+PV2|||Inpatient follow-up
+IN1|1|PLAN23004|ALPHA^Alpha Insurance
+IN3|1|CERT23004
+IN1|2|PLAN23005|BETA^Beta Insurance
+IN2|INSURED23005
+GT1|1||BROWN^MARY
+AL1|1||LATEX^Latex||RASH
+ORC|NW|ORD23005
+OBR|1|ORD23005||LIPID^Lipid Panel
+NTE|1||Lipid order-detail note
+DG1|1||E78.5^Hyperlipidemia
+OBX|1|NM|CHOL^Cholesterol||180|mg/dL|||||F
+OBX|2|NM|HDL^HDL Cholesterol||55|mg/dL|||||F
+CTI|TRIAL23004
+BLG|CH
+ORC|NW|ORD23006
+RQ1|1|SUPPLY23006|SPECIAL^Special Supply
+OBX|1|ST|SUPPLYRESULT^Supply Result||AVAILABLE||||||F
+NTE|1||Supply result observation note
+ORC|NW|ORD23007
+ODS|D|REGULAR^Regular Diet
+NTE|1||Diet order-detail note one
+NTE|2||Diet order-detail note two
+DG1|1||Z71.3^Dietary counseling
+DG1|2||Z72.4^Inappropriate diet
+OBX|1|ST|DIETSTATUS^Diet Status||ACTIVE||||||F
+CTI|TRIAL23005
+BLG|CH"
+"MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260917140000||ORM^O01|ORM23005|P|2.3
+PID|1||PAT23005||WHITE^EMILY||19950814|F
+PD1|||PRIMARYCARE
+NTE|1||Boundary patient note
+PV1|1|O|CLINIC^303^C
+PV2|||Return as needed
+IN1|1|PLAN23006|GAMMA^Gamma Insurance
+IN2|INSURED23006
+IN3|1|CERT23006
+GT1|1||WHITE^ROBERT
+AL1|1||SULFA^Sulfa||HIVES
+ORC|NW|ORD23008
+OBR|1|ORD23008||TEST1^First Test
+NTE|1||First order-detail note
+DG1|1||Z01.89^First diagnosis
+OBX|1|ST|RESULT1^First Result||POSITIVE||||||F
+NTE|1||First observation note
+CTI|TRIAL23006
+BLG|CH
+ORC|NW|ORD23009
+ODT|D|TESTDIET^Test Diet
+NTE|1||Second order-detail note
+DG1|1||Z02.89^Second diagnosis
+DG1|2||Z03.89^Second diagnosis two
+OBX|1|ST|RESULT2^Second Result||NEGATIVE||||||F
+NTE|1||Second observation note
+BLG|CH"
