@@ -48,6 +48,14 @@ models:
       orm:
         o01:
           +schema: orm_o01
+    
+    v2_4:
+      oru:
+        r01:
+          +schema: oru_r01
+      orm:
+        o01:
+          +schema: orm_o01
 
 seeds:
   easyhl7_dev:
@@ -60,3 +68,5 @@ seeds:
         +schema: raw_v2_3
       v2_3_1:
         +schema: raw_v2_3_1
+      v2_4:
+        +schema: raw_v2_4
