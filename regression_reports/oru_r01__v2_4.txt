@@ -1,0 +1,257 @@
+EASYHL7 REGRESSION REPORT
+Version: 2.4
+Message: ORU_R01
+Config: macros/configs/v2_4/ORU_R01.sql
+
+================================================================================
+HIERARCHY
+MODEL: oru_r01__hierarchy__v2_4
+ROWS: 14
+================================================================================
+msg_control_id | segment_sequence | segment_type | segment                                                                      | msg                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | __group_seq_1 | __group_start_seq_1 | patient_seq | patient_start_seq | __group_seq_2 | __group_start_seq_2 | visit_seq | visit_start_seq | __group_seq_3 | __group_start_seq_3 | order_observation_seq | order_observation_start_seq | __group_seq_4 | __group_start_seq_4 | observation_seq | observation_start_seq
+---------------+------------------+--------------+------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+---------------------+-------------+-------------------+---------------+---------------------+-----------+-----------------+---------------+---------------------+-----------------------+-----------------------------+---------------+---------------------+-----------------+----------------------
+ORU24001       | 1                | MSH          | MSH|^~\&|LABAPP|HOSPITAL|EASYHL7|TEST|20260916200000||ORU^R01|ORU24001|P|2.4 | MSH|^~\&|LABAPP|HOSPITAL|EASYHL7|TEST|20260916200000||ORU^R01|ORU24001|P|2.4
+PID|1||PAT24001||SMITH^MICHAEL||19880615|M
+PV1|1|O|CLINIC^101^A
+ORC|RE|ORD24001
+OBR|1|ORD24001||CBC^Complete Blood Count
+NTE|1||CBC result-level note
+OBX|1|NM|WBC^White Blood Cell Count||7.2|10^3/uL|4.0-11.0|N|||F
+NTE|1||WBC observation note
+OBX|2|NM|HGB^Hemoglobin||14.5|g/dL|13.5-17.5|N|||F
+ORC|RE|ORD24002
+OBR|2|ORD24002||BMP^Basic Metabolic Panel
+NTE|1||BMP result-level note
+OBX|1|NM|GLU^Glucose||92|mg/dL|70-99|N|||F
+OBX|2|NM|CREAT^Creatinine||1.0|mg/dL|0.7-1.3|N|||F | 0             | NULL                | 0           | 0                 | 0             | NULL                | 0         | 0               | 0             | NULL                | 0                     | 0                           | 0             | NULL                | 0               | 0                    
+ORU24001       | 2                | PID          | PID|1||PAT24001||SMITH^MICHAEL||19880615|M                                   | MSH|^~\&|LABAPP|HOSPITAL|EASYHL7|TEST|20260916200000||ORU^R01|ORU24001|P|2.4
+PID|1||PAT24001||SMITH^MICHAEL||19880615|M
+PV1|1|O|CLINIC^101^A
+ORC|RE|ORD24001
+OBR|1|ORD24001||CBC^Complete Blood Count
+NTE|1||CBC result-level note
+OBX|1|NM|WBC^White Blood Cell Count||7.2|10^3/uL|4.0-11.0|N|||F
+NTE|1||WBC observation note
+OBX|2|NM|HGB^Hemoglobin||14.5|g/dL|13.5-17.5|N|||F
+ORC|RE|ORD24002
+OBR|2|ORD24002||BMP^Basic Metabolic Panel
+NTE|1||BMP result-level note
+OBX|1|NM|GLU^Glucose||92|mg/dL|70-99|N|||F
+OBX|2|NM|CREAT^Creatinine||1.0|mg/dL|0.7-1.3|N|||F | 1             | 2                   | 1           | 2                 | 0             | NULL                | 0         | 0               | 0             | NULL                | 0                     | 0                           | 0             | NULL                | 0               | 0                    
+ORU24001       | 3                | PV1          | PV1|1|O|CLINIC^101^A                                                         | MSH|^~\&|LABAPP|HOSPITAL|EASYHL7|TEST|20260916200000||ORU^R01|ORU24001|P|2.4
+PID|1||PAT24001||SMITH^MICHAEL||19880615|M
+PV1|1|O|CLINIC^101^A
+ORC|RE|ORD24001
+OBR|1|ORD24001||CBC^Complete Blood Count
+NTE|1||CBC result-level note
+OBX|1|NM|WBC^White Blood Cell Count||7.2|10^3/uL|4.0-11.0|N|||F
+NTE|1||WBC observation note
+OBX|2|NM|HGB^Hemoglobin||14.5|g/dL|13.5-17.5|N|||F
+ORC|RE|ORD24002
+OBR|2|ORD24002||BMP^Basic Metabolic Panel
+NTE|1||BMP result-level note
+OBX|1|NM|GLU^Glucose||92|mg/dL|70-99|N|||F
+OBX|2|NM|CREAT^Creatinine||1.0|mg/dL|0.7-1.3|N|||F | 1             | 2                   | 1           | 2                 | 1             | 3                   | 1         | 3               | 0             | NULL                | 0                     | 0                           | 0             | NULL                | 0               | 0                    
+ORU24001       | 4                | ORC          | ORC|RE|ORD24001                                                              | MSH|^~\&|LABAPP|HOSPITAL|EASYHL7|TEST|20260916200000||ORU^R01|ORU24001|P|2.4
+PID|1||PAT24001||SMITH^MICHAEL||19880615|M
+PV1|1|O|CLINIC^101^A
+ORC|RE|ORD24001
+OBR|1|ORD24001||CBC^Complete Blood Count
+NTE|1||CBC result-level note
+OBX|1|NM|WBC^White Blood Cell Count||7.2|10^3/uL|4.0-11.0|N|||F
+NTE|1||WBC observation note
+OBX|2|NM|HGB^Hemoglobin||14.5|g/dL|13.5-17.5|N|||F
+ORC|RE|ORD24002
+OBR|2|ORD24002||BMP^Basic Metabolic Panel
+NTE|1||BMP result-level note
+OBX|1|NM|GLU^Glucose||92|mg/dL|70-99|N|||F
+OBX|2|NM|CREAT^Creatinine||1.0|mg/dL|0.7-1.3|N|||F | 1             | 2                   | 1           | 2                 | 1             | 3                   | 1         | 3               | 0             | NULL                | 1                     | 4                           | 0             | NULL                | 0               | 0                    
+ORU24001       | 5                | OBR          | OBR|1|ORD24001||CBC^Complete Blood Count                                     | MSH|^~\&|LABAPP|HOSPITAL|EASYHL7|TEST|20260916200000||ORU^R01|ORU24001|P|2.4
+PID|1||PAT24001||SMITH^MICHAEL||19880615|M
+PV1|1|O|CLINIC^101^A
+ORC|RE|ORD24001
+OBR|1|ORD24001||CBC^Complete Blood Count
+NTE|1||CBC result-level note
+OBX|1|NM|WBC^White Blood Cell Count||7.2|10^3/uL|4.0-11.0|N|||F
+NTE|1||WBC observation note
+OBX|2|NM|HGB^Hemoglobin||14.5|g/dL|13.5-17.5|N|||F
+ORC|RE|ORD24002
+OBR|2|ORD24002||BMP^Basic Metabolic Panel
+NTE|1||BMP result-level note
+OBX|1|NM|GLU^Glucose||92|mg/dL|70-99|N|||F
+OBX|2|NM|CREAT^Creatinine||1.0|mg/dL|0.7-1.3|N|||F | 1             | 2                   | 1           | 2                 | 1             | 3                   | 1         | 3               | 1             | 5                   | 1                     | 5                           | 0             | NULL                | 0               | 0                    
+ORU24001       | 6                | NTE          | NTE|1||CBC result-level note                                                 | MSH|^~\&|LABAPP|HOSPITAL|EASYHL7|TEST|20260916200000||ORU^R01|ORU24001|P|2.4
+PID|1||PAT24001||SMITH^MICHAEL||19880615|M
+PV1|1|O|CLINIC^101^A
+ORC|RE|ORD24001
+OBR|1|ORD24001||CBC^Complete Blood Count
+NTE|1||CBC result-level note
+OBX|1|NM|WBC^White Blood Cell Count||7.2|10^3/uL|4.0-11.0|N|||F
+NTE|1||WBC observation note
+OBX|2|NM|HGB^Hemoglobin||14.5|g/dL|13.5-17.5|N|||F
+ORC|RE|ORD24002
+OBR|2|ORD24002||BMP^Basic Metabolic Panel
+NTE|1||BMP result-level note
+OBX|1|NM|GLU^Glucose||92|mg/dL|70-99|N|||F
+OBX|2|NM|CREAT^Creatinine||1.0|mg/dL|0.7-1.3|N|||F | 1             | 2                   | 1           | 2                 | 1             | 3                   | 1         | 3               | 1             | 5                   | 1                     | 5                           | 0             | NULL                | 0               | 0                    
+ORU24001       | 7                | OBX          | OBX|1|NM|WBC^White Blood Cell Count||7.2|10^3/uL|4.0-11.0|N|||F              | MSH|^~\&|LABAPP|HOSPITAL|EASYHL7|TEST|20260916200000||ORU^R01|ORU24001|P|2.4
+PID|1||PAT24001||SMITH^MICHAEL||19880615|M
+PV1|1|O|CLINIC^101^A
+ORC|RE|ORD24001
+OBR|1|ORD24001||CBC^Complete Blood Count
+NTE|1||CBC result-level note
+OBX|1|NM|WBC^White Blood Cell Count||7.2|10^3/uL|4.0-11.0|N|||F
+NTE|1||WBC observation note
+OBX|2|NM|HGB^Hemoglobin||14.5|g/dL|13.5-17.5|N|||F
+ORC|RE|ORD24002
+OBR|2|ORD24002||BMP^Basic Metabolic Panel
+NTE|1||BMP result-level note
+OBX|1|NM|GLU^Glucose||92|mg/dL|70-99|N|||F
+OBX|2|NM|CREAT^Creatinine||1.0|mg/dL|0.7-1.3|N|||F | 1             | 2                   | 1           | 2                 | 1             | 3                   | 1         | 3               | 1             | 5                   | 1                     | 5                           | 1             | 7                   | 1               | 7                    
+ORU24001       | 8                | NTE          | NTE|1||WBC observation note                                                  | MSH|^~\&|LABAPP|HOSPITAL|EASYHL7|TEST|20260916200000||ORU^R01|ORU24001|P|2.4
+PID|1||PAT24001||SMITH^MICHAEL||19880615|M
+PV1|1|O|CLINIC^101^A
+ORC|RE|ORD24001
+OBR|1|ORD24001||CBC^Complete Blood Count
+NTE|1||CBC result-level note
+OBX|1|NM|WBC^White Blood Cell Count||7.2|10^3/uL|4.0-11.0|N|||F
+NTE|1||WBC observation note
+OBX|2|NM|HGB^Hemoglobin||14.5|g/dL|13.5-17.5|N|||F
+ORC|RE|ORD24002
+OBR|2|ORD24002||BMP^Basic Metabolic Panel
+NTE|1||BMP result-level note
+OBX|1|NM|GLU^Glucose||92|mg/dL|70-99|N|||F
+OBX|2|NM|CREAT^Creatinine||1.0|mg/dL|0.7-1.3|N|||F | 1             | 2                   | 1           | 2                 | 1             | 3                   | 1         | 3               | 1             | 5                   | 1                     | 5                           | 1             | 7                   | 1               | 7                    
+ORU24001       | 9                | OBX          | OBX|2|NM|HGB^Hemoglobin||14.5|g/dL|13.5-17.5|N|||F                           | MSH|^~\&|LABAPP|HOSPITAL|EASYHL7|TEST|20260916200000||ORU^R01|ORU24001|P|2.4
+PID|1||PAT24001||SMITH^MICHAEL||19880615|M
+PV1|1|O|CLINIC^101^A
+ORC|RE|ORD24001
+OBR|1|ORD24001||CBC^Complete Blood Count
+NTE|1||CBC result-level note
+OBX|1|NM|WBC^White Blood Cell Count||7.2|10^3/uL|4.0-11.0|N|||F
+NTE|1||WBC observation note
+OBX|2|NM|HGB^Hemoglobin||14.5|g/dL|13.5-17.5|N|||F
+ORC|RE|ORD24002
+OBR|2|ORD24002||BMP^Basic Metabolic Panel
+NTE|1||BMP result-level note
+OBX|1|NM|GLU^Glucose||92|mg/dL|70-99|N|||F
+OBX|2|NM|CREAT^Creatinine||1.0|mg/dL|0.7-1.3|N|||F | 1             | 2                   | 1           | 2                 | 1             | 3                   | 1         | 3               | 1             | 5                   | 1                     | 5                           | 2             | 9                   | 2               | 9                    
+ORU24001       | 10               | ORC          | ORC|RE|ORD24002                                                              | MSH|^~\&|LABAPP|HOSPITAL|EASYHL7|TEST|20260916200000||ORU^R01|ORU24001|P|2.4
+PID|1||PAT24001||SMITH^MICHAEL||19880615|M
+PV1|1|O|CLINIC^101^A
+ORC|RE|ORD24001
+OBR|1|ORD24001||CBC^Complete Blood Count
+NTE|1||CBC result-level note
+OBX|1|NM|WBC^White Blood Cell Count||7.2|10^3/uL|4.0-11.0|N|||F
+NTE|1||WBC observation note
+OBX|2|NM|HGB^Hemoglobin||14.5|g/dL|13.5-17.5|N|||F
+ORC|RE|ORD24002
+OBR|2|ORD24002||BMP^Basic Metabolic Panel
+NTE|1||BMP result-level note
+OBX|1|NM|GLU^Glucose||92|mg/dL|70-99|N|||F
+OBX|2|NM|CREAT^Creatinine||1.0|mg/dL|0.7-1.3|N|||F | 1             | 2                   | 1           | 2                 | 1             | 3                   | 1         | 3               | 1             | 5                   | 2                     | 10                          | 0             | NULL                | 0               | 0                    
+ORU24001       | 11               | OBR          | OBR|2|ORD24002||BMP^Basic Metabolic Panel                                    | MSH|^~\&|LABAPP|HOSPITAL|EASYHL7|TEST|20260916200000||ORU^R01|ORU24001|P|2.4
+PID|1||PAT24001||SMITH^MICHAEL||19880615|M
+PV1|1|O|CLINIC^101^A
+ORC|RE|ORD24001
+OBR|1|ORD24001||CBC^Complete Blood Count
+NTE|1||CBC result-level note
+OBX|1|NM|WBC^White Blood Cell Count||7.2|10^3/uL|4.0-11.0|N|||F
+NTE|1||WBC observation note
+OBX|2|NM|HGB^Hemoglobin||14.5|g/dL|13.5-17.5|N|||F
+ORC|RE|ORD24002
+OBR|2|ORD24002||BMP^Basic Metabolic Panel
+NTE|1||BMP result-level note
+OBX|1|NM|GLU^Glucose||92|mg/dL|70-99|N|||F
+OBX|2|NM|CREAT^Creatinine||1.0|mg/dL|0.7-1.3|N|||F | 1             | 2                   | 1           | 2                 | 1             | 3                   | 1         | 3               | 2             | 11                  | 2                     | 11                          | 0             | NULL                | 0               | 0                    
+ORU24001       | 12               | NTE          | NTE|1||BMP result-level note                                                 | MSH|^~\&|LABAPP|HOSPITAL|EASYHL7|TEST|20260916200000||ORU^R01|ORU24001|P|2.4
+PID|1||PAT24001||SMITH^MICHAEL||19880615|M
+PV1|1|O|CLINIC^101^A
+ORC|RE|ORD24001
+OBR|1|ORD24001||CBC^Complete Blood Count
+NTE|1||CBC result-level note
+OBX|1|NM|WBC^White Blood Cell Count||7.2|10^3/uL|4.0-11.0|N|||F
+NTE|1||WBC observation note
+OBX|2|NM|HGB^Hemoglobin||14.5|g/dL|13.5-17.5|N|||F
+ORC|RE|ORD24002
+OBR|2|ORD24002||BMP^Basic Metabolic Panel
+NTE|1||BMP result-level note
+OBX|1|NM|GLU^Glucose||92|mg/dL|70-99|N|||F
+OBX|2|NM|CREAT^Creatinine||1.0|mg/dL|0.7-1.3|N|||F | 1             | 2                   | 1           | 2                 | 1             | 3                   | 1         | 3               | 2             | 11                  | 2                     | 11                          | 0             | NULL                | 0               | 0                    
+ORU24001       | 13               | OBX          | OBX|1|NM|GLU^Glucose||92|mg/dL|70-99|N|||F                                   | MSH|^~\&|LABAPP|HOSPITAL|EASYHL7|TEST|20260916200000||ORU^R01|ORU24001|P|2.4
+PID|1||PAT24001||SMITH^MICHAEL||19880615|M
+PV1|1|O|CLINIC^101^A
+ORC|RE|ORD24001
+OBR|1|ORD24001||CBC^Complete Blood Count
+NTE|1||CBC result-level note
+OBX|1|NM|WBC^White Blood Cell Count||7.2|10^3/uL|4.0-11.0|N|||F
+NTE|1||WBC observation note
+OBX|2|NM|HGB^Hemoglobin||14.5|g/dL|13.5-17.5|N|||F
+ORC|RE|ORD24002
+OBR|2|ORD24002||BMP^Basic Metabolic Panel
+NTE|1||BMP result-level note
+OBX|1|NM|GLU^Glucose||92|mg/dL|70-99|N|||F
+OBX|2|NM|CREAT^Creatinine||1.0|mg/dL|0.7-1.3|N|||F | 1             | 2                   | 1           | 2                 | 1             | 3                   | 1         | 3               | 2             | 11                  | 2                     | 11                          | 1             | 13                  | 1               | 13                   
+ORU24001       | 14               | OBX          | OBX|2|NM|CREAT^Creatinine||1.0|mg/dL|0.7-1.3|N|||F                           | MSH|^~\&|LABAPP|HOSPITAL|EASYHL7|TEST|20260916200000||ORU^R01|ORU24001|P|2.4
+PID|1||PAT24001||SMITH^MICHAEL||19880615|M
+PV1|1|O|CLINIC^101^A
+ORC|RE|ORD24001
+OBR|1|ORD24001||CBC^Complete Blood Count
+NTE|1||CBC result-level note
+OBX|1|NM|WBC^White Blood Cell Count||7.2|10^3/uL|4.0-11.0|N|||F
+NTE|1||WBC observation note
+OBX|2|NM|HGB^Hemoglobin||14.5|g/dL|13.5-17.5|N|||F
+ORC|RE|ORD24002
+OBR|2|ORD24002||BMP^Basic Metabolic Panel
+NTE|1||BMP result-level note
+OBX|1|NM|GLU^Glucose||92|mg/dL|70-99|N|||F
+OBX|2|NM|CREAT^Creatinine||1.0|mg/dL|0.7-1.3|N|||F | 1             | 2                   | 1           | 2                 | 1             | 3                   | 1         | 3               | 2             | 11                  | 2                     | 11                          | 2             | 14                  | 2               | 14                   
+
+================================================================================
+PATIENT_RESULT
+MODEL: oru_r01__patient_result__v2_4
+ROWS: 1
+================================================================================
+msg_control_id
+--------------
+ORU24001      
+
+================================================================================
+PATIENT
+MODEL: oru_r01__patient__v2_4
+ROWS: 1
+================================================================================
+msg_control_id | patient_seq | pid                                                                                                                    | pd1  | nk1  | nte 
+---------------+-------------+------------------------------------------------------------------------------------------------------------------------+------+------+-----
+ORU24001       | 1           | {"1": "1", "2": "", "3": "PAT24001", "4": "", "5": {"1": "SMITH", "2": "MICHAEL"}, "6": "", "7": "19880615", "8": "M"} | NULL | NULL | NULL
+
+================================================================================
+VISIT
+MODEL: oru_r01__visit__v2_4
+ROWS: 1
+================================================================================
+msg_control_id | patient_seq | visit_seq | pv1                                                              | pv2 
+---------------+-------------+-----------+------------------------------------------------------------------+-----
+ORU24001       | 1           | 1         | {"1": "1", "2": "O", "3": {"1": "CLINIC", "2": "101", "3": "A"}} | NULL
+
+================================================================================
+ORDER_OBSERVATION
+MODEL: oru_r01__order_observation__v2_4
+ROWS: 2
+================================================================================
+msg_control_id | order_observation_seq | orc                          | obr                                                                                   | nte                                                 | ctd  | ft1  | cti 
+---------------+-----------------------+------------------------------+---------------------------------------------------------------------------------------+-----------------------------------------------------+------+------+-----
+ORU24001       | 1                     | {"1": "RE", "2": "ORD24001"} | {"1": "1", "2": "ORD24001", "3": "", "4": {"1": "CBC", "2": "Complete Blood Count"}}  | [{"1": "1", "2": "", "3": "CBC result-level note"}] | NULL | NULL | NULL
+ORU24001       | 2                     | {"1": "RE", "2": "ORD24002"} | {"1": "2", "2": "ORD24002", "3": "", "4": {"1": "BMP", "2": "Basic Metabolic Panel"}} | [{"1": "1", "2": "", "3": "BMP result-level note"}] | NULL | NULL | NULL
+
+================================================================================
+OBSERVATION
+MODEL: oru_r01__observation__v2_4
+ROWS: 4
+================================================================================
+msg_control_id | order_observation_seq | observation_seq | obx                                                                                                                                                                                  | nte                                               
+---------------+-----------------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------
+ORU24001       | 1                     | 1               | {"1": "1", "2": "NM", "3": {"1": "WBC", "2": "White Blood Cell Count"}, "4": "", "5": "7.2", "6": {"1": "10", "2": "3/uL"}, "7": "4.0-11.0", "8": "N", "9": "", "10": "", "11": "F"} | [{"1": "1", "2": "", "3": "WBC observation note"}]
+ORU24001       | 1                     | 2               | {"1": "2", "2": "NM", "3": {"1": "HGB", "2": "Hemoglobin"}, "4": "", "5": "14.5", "6": "g/dL", "7": "13.5-17.5", "8": "N", "9": "", "10": "", "11": "F"}                             | NULL                                              
+ORU24001       | 2                     | 1               | {"1": "1", "2": "NM", "3": {"1": "GLU", "2": "Glucose"}, "4": "", "5": "92", "6": "mg/dL", "7": "70-99", "8": "N", "9": "", "10": "", "11": "F"}                                     | NULL                                              
+ORU24001       | 2                     | 2               | {"1": "2", "2": "NM", "3": {"1": "CREAT", "2": "Creatinine"}, "4": "", "5": "1.0", "6": "mg/dL", "7": "0.7-1.3", "8": "N", "9": "", "10": "", "11": "F"}                             | NULL                                              
