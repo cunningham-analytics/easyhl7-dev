@@ -15,6 +15,10 @@ def version_slug(version: str) -> str:
     return f"v{version.replace('.', '_')}"
 
 
+def version_tuple(version: str) -> tuple[int, ...]:
+    return tuple(int(part) for part in version.split("."))
+
+
 def message_parts(message_type: str) -> tuple[str, str]:
     parts = message_type.lower().split("_", 1)
 
@@ -27,22 +31,52 @@ def message_parts(message_type: str) -> tuple[str, str]:
 
 
 def find_config_file(version: str, message_type: str) -> Path:
-    macro_name = (
-        f"config_{version_slug(version)}_{message_type.upper()}"
+    message_type = message_type.upper()
+    requested_version = version_tuple(version)
+
+    pattern = re.compile(
+        rf"{{%\s*macro\s+config_v(\d+(?:_\d+)*)_"
+        rf"{re.escape(message_type)}\s*\(\s*\)\s*%}}"
     )
+
+    candidates = []
 
     for path in CONFIG_ROOT.rglob("*.sql"):
         text = path.read_text()
 
-        if re.search(
-            rf"{{%\s*macro\s+{re.escape(macro_name)}\s*\(\s*\)\s*%}}",
-            text,
-        ):
-            return path
+        for match in pattern.finditer(text):
+            config_version = tuple(
+                int(part)
+                for part in match.group(1).split("_")
+            )
 
-    raise FileNotFoundError(
-        f"Could not find macro {macro_name} under {CONFIG_ROOT}"
+            if config_version <= requested_version:
+                candidates.append(
+                    (config_version, path)
+                )
+
+    if not candidates:
+        raise FileNotFoundError(
+            f"Could not find a compatible config for "
+            f"{message_type} version {version} under {CONFIG_ROOT}"
+        )
+
+    config_version, config_path = max(
+        candidates,
+        key=lambda candidate: candidate[0],
     )
+
+    resolved_version = ".".join(
+        str(part) for part in config_version
+    )
+
+    print(
+        f"CONFIG {message_type} {version} "
+        f"-> {resolved_version} "
+        f"({config_path.relative_to(PACKAGE_ROOT)})"
+    )
+
+    return config_path
 
 
 def load_config(path: Path) -> dict:
