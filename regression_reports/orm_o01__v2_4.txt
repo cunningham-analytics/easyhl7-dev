@@ -8,8 +8,8 @@ HIERARCHY
 MODEL: orm_o01__hierarchy__v2_4
 ROWS: 37
 ================================================================================
-msg_control_id | segment_sequence | segment_type | segment                                                                        | msg                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | __group_seq_1 | __group_start_seq_1 | patient_seq | patient_start_seq | __group_seq_2 | __group_start_seq_2 | patient_visit_seq | patient_visit_start_seq | __group_seq_3 | __group_start_seq_3 | insurance_seq | insurance_start_seq | __group_seq_4 | __group_start_seq_4 | order_seq | order_start_seq | __group_seq_5 | __group_start_seq_5 | order_detail_seq | order_detail_start_seq | __group_seq_6 | __group_start_seq_6 | observation_seq | observation_start_seq
----------------+------------------+--------------+--------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+---------------------+-------------+-------------------+---------------+---------------------+-------------------+-------------------------+---------------+---------------------+---------------+---------------------+---------------+---------------------+-----------+-----------------+---------------+---------------------+------------------+------------------------+---------------+---------------------+-----------------+----------------------
+msg_control_id | segment_sequence | segment_type | segment                                                                        | msg                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | __group_boundary_seq_1 | __group_seq_1 | __group_start_seq_1 | patient_seq | patient_start_seq | __group_boundary_seq_2 | __group_seq_2 | __group_start_seq_2 | patient_visit_seq | patient_visit_start_seq | __group_boundary_seq_3 | __group_seq_3 | __group_start_seq_3 | insurance_seq | insurance_start_seq | __group_boundary_seq_4 | __group_seq_4 | __group_start_seq_4 | order_seq | order_start_seq | __group_boundary_seq_5 | __group_seq_5 | __group_start_seq_5 | order_detail_seq | order_detail_start_seq | __group_boundary_seq_6 | __group_seq_6 | __group_start_seq_6 | observation_seq | observation_start_seq
+---------------+------------------+--------------+--------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+---------------+---------------------+-------------+-------------------+------------------------+---------------+---------------------+-------------------+-------------------------+------------------------+---------------+---------------------+---------------+---------------------+------------------------+---------------+---------------------+-----------+-----------------+------------------------+---------------+---------------------+------------------+------------------------+------------------------+---------------+---------------------+-----------------+----------------------
 ORM24001       | 1                | MSH          | MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260916190000||ORM^O01|ORM24001|P|2.4 | MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260916190000||ORM^O01|ORM24001|P|2.4
 NTE|1||Message-level note
 PID|1||PAT24001||SMITH^MICHAEL||19880615|M
@@ -46,7 +46,7 @@ OBX|1|ST|PHARMSTATUS^Pharmacy Status||PENDING
 FT1|1|||20260916|CG|PHARMFEE
 CTI|TRIAL003
 ORC|NW|ORD24003
-BLG|CO | 0             | NULL                | 0           | 0                 | 0             | NULL                | 0                 | 0                       | 0             | NULL                | 0             | 0                   | 0             | NULL                | 0         | 0               | 0             | NULL                | 0                | 0                      | 0             | NULL                | 0               | 0                    
+BLG|CO | 0                      | 0             | NULL                | 0           | 0                 | 0                      | 0             | NULL                | 0                 | 0                       | 0                      | 0             | NULL                | 0             | 0                   | 0                      | 0             | NULL                | 0         | 0               | 0                      | 0             | NULL                | 0                | 0                      | 0                      | 0             | NULL                | 0               | 0                    
 ORM24001       | 2                | NTE          | NTE|1||Message-level note                                                      | MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260916190000||ORM^O01|ORM24001|P|2.4
 NTE|1||Message-level note
 PID|1||PAT24001||SMITH^MICHAEL||19880615|M
@@ -83,7 +83,7 @@ OBX|1|ST|PHARMSTATUS^Pharmacy Status||PENDING
 FT1|1|||20260916|CG|PHARMFEE
 CTI|TRIAL003
 ORC|NW|ORD24003
-BLG|CO | 0             | NULL                | 0           | 0                 | 0             | NULL                | 0                 | 0                       | 0             | NULL                | 0             | 0                   | 0             | NULL                | 0         | 0               | 0             | NULL                | 0                | 0                      | 0             | NULL                | 0               | 0                    
+BLG|CO | 0                      | 0             | NULL                | 0           | 0                 | 0                      | 0             | NULL                | 0                 | 0                       | 0                      | 0             | NULL                | 0             | 0                   | 0                      | 0             | NULL                | 0         | 0               | 0                      | 0             | NULL                | 0                | 0                      | 0                      | 0             | NULL                | 0               | 0                    
 ORM24001       | 3                | PID          | PID|1||PAT24001||SMITH^MICHAEL||19880615|M                                     | MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260916190000||ORM^O01|ORM24001|P|2.4
 NTE|1||Message-level note
 PID|1||PAT24001||SMITH^MICHAEL||19880615|M
@@ -120,7 +120,7 @@ OBX|1|ST|PHARMSTATUS^Pharmacy Status||PENDING
 FT1|1|||20260916|CG|PHARMFEE
 CTI|TRIAL003
 ORC|NW|ORD24003
-BLG|CO | 1             | 3                   | 1           | 3                 | 0             | NULL                | 0                 | 0                       | 0             | NULL                | 0             | 0                   | 0             | NULL                | 0         | 0               | 0             | NULL                | 0                | 0                      | 0             | NULL                | 0               | 0                    
+BLG|CO | 0                      | 1             | 3                   | 1           | 3                 | 0                      | 0             | NULL                | 0                 | 0                       | 0                      | 0             | NULL                | 0             | 0                   | 3                      | 0             | NULL                | 0         | 0               | 0                      | 0             | NULL                | 0                | 0                      | 0                      | 0             | NULL                | 0               | 0                    
 ORM24001       | 4                | PD1          | PD1|||FAMILYMED                                                                | MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260916190000||ORM^O01|ORM24001|P|2.4
 NTE|1||Message-level note
 PID|1||PAT24001||SMITH^MICHAEL||19880615|M
@@ -157,7 +157,7 @@ OBX|1|ST|PHARMSTATUS^Pharmacy Status||PENDING
 FT1|1|||20260916|CG|PHARMFEE
 CTI|TRIAL003
 ORC|NW|ORD24003
-BLG|CO | 1             | 3                   | 1           | 3                 | 0             | NULL                | 0                 | 0                       | 0             | NULL                | 0             | 0                   | 0             | NULL                | 0         | 0               | 0             | NULL                | 0                | 0                      | 0             | NULL                | 0               | 0                    
+BLG|CO | 0                      | 1             | 3                   | 1           | 3                 | 0                      | 0             | NULL                | 0                 | 0                       | 0                      | 0             | NULL                | 0             | 0                   | 3                      | 0             | NULL                | 0         | 0               | 0                      | 0             | NULL                | 0                | 0                      | 0                      | 0             | NULL                | 0               | 0                    
 ORM24001       | 5                | NTE          | NTE|1||Patient-level note                                                      | MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260916190000||ORM^O01|ORM24001|P|2.4
 NTE|1||Message-level note
 PID|1||PAT24001||SMITH^MICHAEL||19880615|M
@@ -194,7 +194,7 @@ OBX|1|ST|PHARMSTATUS^Pharmacy Status||PENDING
 FT1|1|||20260916|CG|PHARMFEE
 CTI|TRIAL003
 ORC|NW|ORD24003
-BLG|CO | 1             | 3                   | 1           | 3                 | 0             | NULL                | 0                 | 0                       | 0             | NULL                | 0             | 0                   | 0             | NULL                | 0         | 0               | 0             | NULL                | 0                | 0                      | 0             | NULL                | 0               | 0                    
+BLG|CO | 0                      | 1             | 3                   | 1           | 3                 | 0                      | 0             | NULL                | 0                 | 0                       | 0                      | 0             | NULL                | 0             | 0                   | 3                      | 0             | NULL                | 0         | 0               | 0                      | 0             | NULL                | 0                | 0                      | 0                      | 0             | NULL                | 0               | 0                    
 ORM24001       | 6                | PV1          | PV1|1|O|CLINIC^101^A                                                           | MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260916190000||ORM^O01|ORM24001|P|2.4
 NTE|1||Message-level note
 PID|1||PAT24001||SMITH^MICHAEL||19880615|M
@@ -231,7 +231,7 @@ OBX|1|ST|PHARMSTATUS^Pharmacy Status||PENDING
 FT1|1|||20260916|CG|PHARMFEE
 CTI|TRIAL003
 ORC|NW|ORD24003
-BLG|CO | 1             | 3                   | 1           | 3                 | 1             | 6                   | 1                 | 6                       | 0             | NULL                | 0             | 0                   | 0             | NULL                | 0         | 0               | 0             | NULL                | 0                | 0                      | 0             | NULL                | 0               | 0                    
+BLG|CO | 0                      | 1             | 3                   | 1           | 3                 | 0                      | 1             | 6                   | 1                 | 6                       | 0                      | 0             | NULL                | 0             | 0                   | 3                      | 0             | NULL                | 0         | 0               | 0                      | 0             | NULL                | 0                | 0                      | 0                      | 0             | NULL                | 0               | 0                    
 ORM24001       | 7                | PV2          | PV2|||Follow-up visit                                                          | MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260916190000||ORM^O01|ORM24001|P|2.4
 NTE|1||Message-level note
 PID|1||PAT24001||SMITH^MICHAEL||19880615|M
@@ -268,7 +268,7 @@ OBX|1|ST|PHARMSTATUS^Pharmacy Status||PENDING
 FT1|1|||20260916|CG|PHARMFEE
 CTI|TRIAL003
 ORC|NW|ORD24003
-BLG|CO | 1             | 3                   | 1           | 3                 | 1             | 6                   | 1                 | 6                       | 0             | NULL                | 0             | 0                   | 0             | NULL                | 0         | 0               | 0             | NULL                | 0                | 0                      | 0             | NULL                | 0               | 0                    
+BLG|CO | 0                      | 1             | 3                   | 1           | 3                 | 0                      | 1             | 6                   | 1                 | 6                       | 0                      | 0             | NULL                | 0             | 0                   | 3                      | 0             | NULL                | 0         | 0               | 0                      | 0             | NULL                | 0                | 0                      | 0                      | 0             | NULL                | 0               | 0                    
 ORM24001       | 8                | IN1          | IN1|1|BCBS|PLAN001                                                             | MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260916190000||ORM^O01|ORM24001|P|2.4
 NTE|1||Message-level note
 PID|1||PAT24001||SMITH^MICHAEL||19880615|M
@@ -305,7 +305,7 @@ OBX|1|ST|PHARMSTATUS^Pharmacy Status||PENDING
 FT1|1|||20260916|CG|PHARMFEE
 CTI|TRIAL003
 ORC|NW|ORD24003
-BLG|CO | 1             | 3                   | 1           | 3                 | 1             | 6                   | 1                 | 6                       | 1             | 8                   | 1             | 8                   | 0             | NULL                | 0         | 0               | 0             | NULL                | 0                | 0                      | 0             | NULL                | 0               | 0                    
+BLG|CO | 0                      | 1             | 3                   | 1           | 3                 | 8                      | 1             | 6                   | 0                 | 0                       | 0                      | 1             | 8                   | 1             | 8                   | 3                      | 0             | NULL                | 0         | 0               | 0                      | 0             | NULL                | 0                | 0                      | 0                      | 0             | NULL                | 0               | 0                    
 ORM24001       | 9                | IN2          | IN2|EMP001                                                                     | MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260916190000||ORM^O01|ORM24001|P|2.4
 NTE|1||Message-level note
 PID|1||PAT24001||SMITH^MICHAEL||19880615|M
@@ -342,7 +342,7 @@ OBX|1|ST|PHARMSTATUS^Pharmacy Status||PENDING
 FT1|1|||20260916|CG|PHARMFEE
 CTI|TRIAL003
 ORC|NW|ORD24003
-BLG|CO | 1             | 3                   | 1           | 3                 | 1             | 6                   | 1                 | 6                       | 1             | 8                   | 1             | 8                   | 0             | NULL                | 0         | 0               | 0             | NULL                | 0                | 0                      | 0             | NULL                | 0               | 0                    
+BLG|CO | 0                      | 1             | 3                   | 1           | 3                 | 8                      | 1             | 6                   | 0                 | 0                       | 0                      | 1             | 8                   | 1             | 8                   | 3                      | 0             | NULL                | 0         | 0               | 0                      | 0             | NULL                | 0                | 0                      | 0                      | 0             | NULL                | 0               | 0                    
 ORM24001       | 10               | IN3          | IN3|CERT001                                                                    | MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260916190000||ORM^O01|ORM24001|P|2.4
 NTE|1||Message-level note
 PID|1||PAT24001||SMITH^MICHAEL||19880615|M
@@ -379,7 +379,7 @@ OBX|1|ST|PHARMSTATUS^Pharmacy Status||PENDING
 FT1|1|||20260916|CG|PHARMFEE
 CTI|TRIAL003
 ORC|NW|ORD24003
-BLG|CO | 1             | 3                   | 1           | 3                 | 1             | 6                   | 1                 | 6                       | 1             | 8                   | 1             | 8                   | 0             | NULL                | 0         | 0               | 0             | NULL                | 0                | 0                      | 0             | NULL                | 0               | 0                    
+BLG|CO | 0                      | 1             | 3                   | 1           | 3                 | 8                      | 1             | 6                   | 0                 | 0                       | 0                      | 1             | 8                   | 1             | 8                   | 3                      | 0             | NULL                | 0         | 0               | 0                      | 0             | NULL                | 0                | 0                      | 0                      | 0             | NULL                | 0               | 0                    
 ORM24001       | 11               | IN1          | IN1|2|AETNA|PLAN002                                                            | MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260916190000||ORM^O01|ORM24001|P|2.4
 NTE|1||Message-level note
 PID|1||PAT24001||SMITH^MICHAEL||19880615|M
@@ -416,7 +416,7 @@ OBX|1|ST|PHARMSTATUS^Pharmacy Status||PENDING
 FT1|1|||20260916|CG|PHARMFEE
 CTI|TRIAL003
 ORC|NW|ORD24003
-BLG|CO | 1             | 3                   | 1           | 3                 | 1             | 6                   | 1                 | 6                       | 2             | 11                  | 2             | 11                  | 0             | NULL                | 0         | 0               | 0             | NULL                | 0                | 0                      | 0             | NULL                | 0               | 0                    
+BLG|CO | 0                      | 1             | 3                   | 1           | 3                 | 11                     | 1             | 6                   | 0                 | 0                       | 0                      | 2             | 11                  | 2             | 11                  | 3                      | 0             | NULL                | 0         | 0               | 0                      | 0             | NULL                | 0                | 0                      | 0                      | 0             | NULL                | 0               | 0                    
 ORM24001       | 12               | IN2          | IN2|EMP002                                                                     | MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260916190000||ORM^O01|ORM24001|P|2.4
 NTE|1||Message-level note
 PID|1||PAT24001||SMITH^MICHAEL||19880615|M
@@ -453,7 +453,7 @@ OBX|1|ST|PHARMSTATUS^Pharmacy Status||PENDING
 FT1|1|||20260916|CG|PHARMFEE
 CTI|TRIAL003
 ORC|NW|ORD24003
-BLG|CO | 1             | 3                   | 1           | 3                 | 1             | 6                   | 1                 | 6                       | 2             | 11                  | 2             | 11                  | 0             | NULL                | 0         | 0               | 0             | NULL                | 0                | 0                      | 0             | NULL                | 0               | 0                    
+BLG|CO | 0                      | 1             | 3                   | 1           | 3                 | 11                     | 1             | 6                   | 0                 | 0                       | 0                      | 2             | 11                  | 2             | 11                  | 3                      | 0             | NULL                | 0         | 0               | 0                      | 0             | NULL                | 0                | 0                      | 0                      | 0             | NULL                | 0               | 0                    
 ORM24001       | 13               | GT1          | GT1|1||SMITH^MICHAEL                                                           | MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260916190000||ORM^O01|ORM24001|P|2.4
 NTE|1||Message-level note
 PID|1||PAT24001||SMITH^MICHAEL||19880615|M
@@ -490,7 +490,7 @@ OBX|1|ST|PHARMSTATUS^Pharmacy Status||PENDING
 FT1|1|||20260916|CG|PHARMFEE
 CTI|TRIAL003
 ORC|NW|ORD24003
-BLG|CO | 1             | 3                   | 1           | 3                 | 1             | 6                   | 1                 | 6                       | 2             | 11                  | 2             | 11                  | 0             | NULL                | 0         | 0               | 0             | NULL                | 0                | 0                      | 0             | NULL                | 0               | 0                    
+BLG|CO | 0                      | 1             | 3                   | 1           | 3                 | 13                     | 1             | 6                   | 0                 | 0                       | 13                     | 2             | 11                  | 0             | 0                   | 3                      | 0             | NULL                | 0         | 0               | 0                      | 0             | NULL                | 0                | 0                      | 0                      | 0             | NULL                | 0               | 0                    
 ORM24001       | 14               | AL1          | AL1|1||PENICILLIN                                                              | MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260916190000||ORM^O01|ORM24001|P|2.4
 NTE|1||Message-level note
 PID|1||PAT24001||SMITH^MICHAEL||19880615|M
@@ -527,7 +527,7 @@ OBX|1|ST|PHARMSTATUS^Pharmacy Status||PENDING
 FT1|1|||20260916|CG|PHARMFEE
 CTI|TRIAL003
 ORC|NW|ORD24003
-BLG|CO | 1             | 3                   | 1           | 3                 | 1             | 6                   | 1                 | 6                       | 2             | 11                  | 2             | 11                  | 0             | NULL                | 0         | 0               | 0             | NULL                | 0                | 0                      | 0             | NULL                | 0               | 0                    
+BLG|CO | 0                      | 1             | 3                   | 1           | 3                 | 14                     | 1             | 6                   | 0                 | 0                       | 14                     | 2             | 11                  | 0             | 0                   | 3                      | 0             | NULL                | 0         | 0               | 0                      | 0             | NULL                | 0                | 0                      | 0                      | 0             | NULL                | 0               | 0                    
 ORM24001       | 15               | AL1          | AL1|2||PEANUTS                                                                 | MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260916190000||ORM^O01|ORM24001|P|2.4
 NTE|1||Message-level note
 PID|1||PAT24001||SMITH^MICHAEL||19880615|M
@@ -564,7 +564,7 @@ OBX|1|ST|PHARMSTATUS^Pharmacy Status||PENDING
 FT1|1|||20260916|CG|PHARMFEE
 CTI|TRIAL003
 ORC|NW|ORD24003
-BLG|CO | 1             | 3                   | 1           | 3                 | 1             | 6                   | 1                 | 6                       | 2             | 11                  | 2             | 11                  | 0             | NULL                | 0         | 0               | 0             | NULL                | 0                | 0                      | 0             | NULL                | 0               | 0                    
+BLG|CO | 0                      | 1             | 3                   | 1           | 3                 | 15                     | 1             | 6                   | 0                 | 0                       | 15                     | 2             | 11                  | 0             | 0                   | 3                      | 0             | NULL                | 0         | 0               | 0                      | 0             | NULL                | 0                | 0                      | 0                      | 0             | NULL                | 0               | 0                    
 ORM24001       | 16               | ORC          | ORC|NW|ORD24001                                                                | MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260916190000||ORM^O01|ORM24001|P|2.4
 NTE|1||Message-level note
 PID|1||PAT24001||SMITH^MICHAEL||19880615|M
@@ -601,303 +601,7 @@ OBX|1|ST|PHARMSTATUS^Pharmacy Status||PENDING
 FT1|1|||20260916|CG|PHARMFEE
 CTI|TRIAL003
 ORC|NW|ORD24003
-BLG|CO | 1             | 3                   | 1           | 3                 | 1             | 6                   | 1                 | 6                       | 2             | 11                  | 2             | 11                  | 1             | 16                  | 1         | 16              | 0             | NULL                | 0                | 0                      | 0             | NULL                | 0               | 0                    
-ORM24001       | 17               | OBR          | OBR|1|ORD24001||CBC^Complete Blood Count                                       | MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260916190000||ORM^O01|ORM24001|P|2.4
-NTE|1||Message-level note
-PID|1||PAT24001||SMITH^MICHAEL||19880615|M
-PD1|||FAMILYMED
-NTE|1||Patient-level note
-PV1|1|O|CLINIC^101^A
-PV2|||Follow-up visit
-IN1|1|BCBS|PLAN001
-IN2|EMP001
-IN3|CERT001
-IN1|2|AETNA|PLAN002
-IN2|EMP002
-GT1|1||SMITH^MICHAEL
-AL1|1||PENICILLIN
-AL1|2||PEANUTS
-ORC|NW|ORD24001
-OBR|1|ORD24001||CBC^Complete Blood Count
-NTE|1||CBC order detail note
-CTD|1|LAB^CONTACT
-DG1|1||Z00.00^General examination
-DG1|2||R53.83^Fatigue
-OBX|1|ST|ORDERSTATUS^Order Status||RECEIVED
-NTE|1||First observation note
-OBX|2|ST|PRIORITY^Priority||ROUTINE
-FT1|1|||20260916|CG|LABFEE
-FT1|2|||20260916|CG|PROCESSINGFEE
-CTI|TRIAL001
-CTI|TRIAL002
-BLG|CO
-ORC|NW|ORD24002
-RXO|AMOX500^Amoxicillin 500 MG|500|MG|500|MG|PO
-NTE|1||Take with food
-OBX|1|ST|PHARMSTATUS^Pharmacy Status||PENDING
-FT1|1|||20260916|CG|PHARMFEE
-CTI|TRIAL003
-ORC|NW|ORD24003
-BLG|CO | 1             | 3                   | 1           | 3                 | 1             | 6                   | 1                 | 6                       | 2             | 11                  | 2             | 11                  | 1             | 16                  | 1         | 16              | 1             | 17                  | 1                | 17                     | 0             | NULL                | 0               | 0                    
-ORM24001       | 18               | NTE          | NTE|1||CBC order detail note                                                   | MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260916190000||ORM^O01|ORM24001|P|2.4
-NTE|1||Message-level note
-PID|1||PAT24001||SMITH^MICHAEL||19880615|M
-PD1|||FAMILYMED
-NTE|1||Patient-level note
-PV1|1|O|CLINIC^101^A
-PV2|||Follow-up visit
-IN1|1|BCBS|PLAN001
-IN2|EMP001
-IN3|CERT001
-IN1|2|AETNA|PLAN002
-IN2|EMP002
-GT1|1||SMITH^MICHAEL
-AL1|1||PENICILLIN
-AL1|2||PEANUTS
-ORC|NW|ORD24001
-OBR|1|ORD24001||CBC^Complete Blood Count
-NTE|1||CBC order detail note
-CTD|1|LAB^CONTACT
-DG1|1||Z00.00^General examination
-DG1|2||R53.83^Fatigue
-OBX|1|ST|ORDERSTATUS^Order Status||RECEIVED
-NTE|1||First observation note
-OBX|2|ST|PRIORITY^Priority||ROUTINE
-FT1|1|||20260916|CG|LABFEE
-FT1|2|||20260916|CG|PROCESSINGFEE
-CTI|TRIAL001
-CTI|TRIAL002
-BLG|CO
-ORC|NW|ORD24002
-RXO|AMOX500^Amoxicillin 500 MG|500|MG|500|MG|PO
-NTE|1||Take with food
-OBX|1|ST|PHARMSTATUS^Pharmacy Status||PENDING
-FT1|1|||20260916|CG|PHARMFEE
-CTI|TRIAL003
-ORC|NW|ORD24003
-BLG|CO | 1             | 3                   | 1           | 3                 | 1             | 6                   | 1                 | 6                       | 2             | 11                  | 2             | 11                  | 1             | 16                  | 1         | 16              | 1             | 17                  | 1                | 17                     | 0             | NULL                | 0               | 0                    
-ORM24001       | 19               | CTD          | CTD|1|LAB^CONTACT                                                              | MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260916190000||ORM^O01|ORM24001|P|2.4
-NTE|1||Message-level note
-PID|1||PAT24001||SMITH^MICHAEL||19880615|M
-PD1|||FAMILYMED
-NTE|1||Patient-level note
-PV1|1|O|CLINIC^101^A
-PV2|||Follow-up visit
-IN1|1|BCBS|PLAN001
-IN2|EMP001
-IN3|CERT001
-IN1|2|AETNA|PLAN002
-IN2|EMP002
-GT1|1||SMITH^MICHAEL
-AL1|1||PENICILLIN
-AL1|2||PEANUTS
-ORC|NW|ORD24001
-OBR|1|ORD24001||CBC^Complete Blood Count
-NTE|1||CBC order detail note
-CTD|1|LAB^CONTACT
-DG1|1||Z00.00^General examination
-DG1|2||R53.83^Fatigue
-OBX|1|ST|ORDERSTATUS^Order Status||RECEIVED
-NTE|1||First observation note
-OBX|2|ST|PRIORITY^Priority||ROUTINE
-FT1|1|||20260916|CG|LABFEE
-FT1|2|||20260916|CG|PROCESSINGFEE
-CTI|TRIAL001
-CTI|TRIAL002
-BLG|CO
-ORC|NW|ORD24002
-RXO|AMOX500^Amoxicillin 500 MG|500|MG|500|MG|PO
-NTE|1||Take with food
-OBX|1|ST|PHARMSTATUS^Pharmacy Status||PENDING
-FT1|1|||20260916|CG|PHARMFEE
-CTI|TRIAL003
-ORC|NW|ORD24003
-BLG|CO | 1             | 3                   | 1           | 3                 | 1             | 6                   | 1                 | 6                       | 2             | 11                  | 2             | 11                  | 1             | 16                  | 1         | 16              | 1             | 17                  | 1                | 17                     | 0             | NULL                | 0               | 0                    
-ORM24001       | 20               | DG1          | DG1|1||Z00.00^General examination                                              | MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260916190000||ORM^O01|ORM24001|P|2.4
-NTE|1||Message-level note
-PID|1||PAT24001||SMITH^MICHAEL||19880615|M
-PD1|||FAMILYMED
-NTE|1||Patient-level note
-PV1|1|O|CLINIC^101^A
-PV2|||Follow-up visit
-IN1|1|BCBS|PLAN001
-IN2|EMP001
-IN3|CERT001
-IN1|2|AETNA|PLAN002
-IN2|EMP002
-GT1|1||SMITH^MICHAEL
-AL1|1||PENICILLIN
-AL1|2||PEANUTS
-ORC|NW|ORD24001
-OBR|1|ORD24001||CBC^Complete Blood Count
-NTE|1||CBC order detail note
-CTD|1|LAB^CONTACT
-DG1|1||Z00.00^General examination
-DG1|2||R53.83^Fatigue
-OBX|1|ST|ORDERSTATUS^Order Status||RECEIVED
-NTE|1||First observation note
-OBX|2|ST|PRIORITY^Priority||ROUTINE
-FT1|1|||20260916|CG|LABFEE
-FT1|2|||20260916|CG|PROCESSINGFEE
-CTI|TRIAL001
-CTI|TRIAL002
-BLG|CO
-ORC|NW|ORD24002
-RXO|AMOX500^Amoxicillin 500 MG|500|MG|500|MG|PO
-NTE|1||Take with food
-OBX|1|ST|PHARMSTATUS^Pharmacy Status||PENDING
-FT1|1|||20260916|CG|PHARMFEE
-CTI|TRIAL003
-ORC|NW|ORD24003
-BLG|CO | 1             | 3                   | 1           | 3                 | 1             | 6                   | 1                 | 6                       | 2             | 11                  | 2             | 11                  | 1             | 16                  | 1         | 16              | 1             | 17                  | 1                | 17                     | 0             | NULL                | 0               | 0                    
-ORM24001       | 21               | DG1          | DG1|2||R53.83^Fatigue                                                          | MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260916190000||ORM^O01|ORM24001|P|2.4
-NTE|1||Message-level note
-PID|1||PAT24001||SMITH^MICHAEL||19880615|M
-PD1|||FAMILYMED
-NTE|1||Patient-level note
-PV1|1|O|CLINIC^101^A
-PV2|||Follow-up visit
-IN1|1|BCBS|PLAN001
-IN2|EMP001
-IN3|CERT001
-IN1|2|AETNA|PLAN002
-IN2|EMP002
-GT1|1||SMITH^MICHAEL
-AL1|1||PENICILLIN
-AL1|2||PEANUTS
-ORC|NW|ORD24001
-OBR|1|ORD24001||CBC^Complete Blood Count
-NTE|1||CBC order detail note
-CTD|1|LAB^CONTACT
-DG1|1||Z00.00^General examination
-DG1|2||R53.83^Fatigue
-OBX|1|ST|ORDERSTATUS^Order Status||RECEIVED
-NTE|1||First observation note
-OBX|2|ST|PRIORITY^Priority||ROUTINE
-FT1|1|||20260916|CG|LABFEE
-FT1|2|||20260916|CG|PROCESSINGFEE
-CTI|TRIAL001
-CTI|TRIAL002
-BLG|CO
-ORC|NW|ORD24002
-RXO|AMOX500^Amoxicillin 500 MG|500|MG|500|MG|PO
-NTE|1||Take with food
-OBX|1|ST|PHARMSTATUS^Pharmacy Status||PENDING
-FT1|1|||20260916|CG|PHARMFEE
-CTI|TRIAL003
-ORC|NW|ORD24003
-BLG|CO | 1             | 3                   | 1           | 3                 | 1             | 6                   | 1                 | 6                       | 2             | 11                  | 2             | 11                  | 1             | 16                  | 1         | 16              | 1             | 17                  | 1                | 17                     | 0             | NULL                | 0               | 0                    
-ORM24001       | 22               | OBX          | OBX|1|ST|ORDERSTATUS^Order Status||RECEIVED                                    | MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260916190000||ORM^O01|ORM24001|P|2.4
-NTE|1||Message-level note
-PID|1||PAT24001||SMITH^MICHAEL||19880615|M
-PD1|||FAMILYMED
-NTE|1||Patient-level note
-PV1|1|O|CLINIC^101^A
-PV2|||Follow-up visit
-IN1|1|BCBS|PLAN001
-IN2|EMP001
-IN3|CERT001
-IN1|2|AETNA|PLAN002
-IN2|EMP002
-GT1|1||SMITH^MICHAEL
-AL1|1||PENICILLIN
-AL1|2||PEANUTS
-ORC|NW|ORD24001
-OBR|1|ORD24001||CBC^Complete Blood Count
-NTE|1||CBC order detail note
-CTD|1|LAB^CONTACT
-DG1|1||Z00.00^General examination
-DG1|2||R53.83^Fatigue
-OBX|1|ST|ORDERSTATUS^Order Status||RECEIVED
-NTE|1||First observation note
-OBX|2|ST|PRIORITY^Priority||ROUTINE
-FT1|1|||20260916|CG|LABFEE
-FT1|2|||20260916|CG|PROCESSINGFEE
-CTI|TRIAL001
-CTI|TRIAL002
-BLG|CO
-ORC|NW|ORD24002
-RXO|AMOX500^Amoxicillin 500 MG|500|MG|500|MG|PO
-NTE|1||Take with food
-OBX|1|ST|PHARMSTATUS^Pharmacy Status||PENDING
-FT1|1|||20260916|CG|PHARMFEE
-CTI|TRIAL003
-ORC|NW|ORD24003
-BLG|CO | 1             | 3                   | 1           | 3                 | 1             | 6                   | 1                 | 6                       | 2             | 11                  | 2             | 11                  | 1             | 16                  | 1         | 16              | 1             | 17                  | 1                | 17                     | 1             | 22                  | 1               | 22                   
-ORM24001       | 23               | NTE          | NTE|1||First observation note                                                  | MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260916190000||ORM^O01|ORM24001|P|2.4
-NTE|1||Message-level note
-PID|1||PAT24001||SMITH^MICHAEL||19880615|M
-PD1|||FAMILYMED
-NTE|1||Patient-level note
-PV1|1|O|CLINIC^101^A
-PV2|||Follow-up visit
-IN1|1|BCBS|PLAN001
-IN2|EMP001
-IN3|CERT001
-IN1|2|AETNA|PLAN002
-IN2|EMP002
-GT1|1||SMITH^MICHAEL
-AL1|1||PENICILLIN
-AL1|2||PEANUTS
-ORC|NW|ORD24001
-OBR|1|ORD24001||CBC^Complete Blood Count
-NTE|1||CBC order detail note
-CTD|1|LAB^CONTACT
-DG1|1||Z00.00^General examination
-DG1|2||R53.83^Fatigue
-OBX|1|ST|ORDERSTATUS^Order Status||RECEIVED
-NTE|1||First observation note
-OBX|2|ST|PRIORITY^Priority||ROUTINE
-FT1|1|||20260916|CG|LABFEE
-FT1|2|||20260916|CG|PROCESSINGFEE
-CTI|TRIAL001
-CTI|TRIAL002
-BLG|CO
-ORC|NW|ORD24002
-RXO|AMOX500^Amoxicillin 500 MG|500|MG|500|MG|PO
-NTE|1||Take with food
-OBX|1|ST|PHARMSTATUS^Pharmacy Status||PENDING
-FT1|1|||20260916|CG|PHARMFEE
-CTI|TRIAL003
-ORC|NW|ORD24003
-BLG|CO | 1             | 3                   | 1           | 3                 | 1             | 6                   | 1                 | 6                       | 2             | 11                  | 2             | 11                  | 1             | 16                  | 1         | 16              | 1             | 17                  | 1                | 17                     | 1             | 22                  | 1               | 22                   
-ORM24001       | 24               | OBX          | OBX|2|ST|PRIORITY^Priority||ROUTINE                                            | MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260916190000||ORM^O01|ORM24001|P|2.4
-NTE|1||Message-level note
-PID|1||PAT24001||SMITH^MICHAEL||19880615|M
-PD1|||FAMILYMED
-NTE|1||Patient-level note
-PV1|1|O|CLINIC^101^A
-PV2|||Follow-up visit
-IN1|1|BCBS|PLAN001
-IN2|EMP001
-IN3|CERT001
-IN1|2|AETNA|PLAN002
-IN2|EMP002
-GT1|1||SMITH^MICHAEL
-AL1|1||PENICILLIN
-AL1|2||PEANUTS
-ORC|NW|ORD24001
-OBR|1|ORD24001||CBC^Complete Blood Count
-NTE|1||CBC order detail note
-CTD|1|LAB^CONTACT
-DG1|1||Z00.00^General examination
-DG1|2||R53.83^Fatigue
-OBX|1|ST|ORDERSTATUS^Order Status||RECEIVED
-NTE|1||First observation note
-OBX|2|ST|PRIORITY^Priority||ROUTINE
-FT1|1|||20260916|CG|LABFEE
-FT1|2|||20260916|CG|PROCESSINGFEE
-CTI|TRIAL001
-CTI|TRIAL002
-BLG|CO
-ORC|NW|ORD24002
-RXO|AMOX500^Amoxicillin 500 MG|500|MG|500|MG|PO
-NTE|1||Take with food
-OBX|1|ST|PHARMSTATUS^Pharmacy Status||PENDING
-FT1|1|||20260916|CG|PHARMFEE
-CTI|TRIAL003
-ORC|NW|ORD24003
-BLG|CO | 1             | 3                   | 1           | 3                 | 1             | 6                   | 1                 | 6                       | 2             | 11                  | 2             | 11                  | 1             | 16                  | 1         | 16              | 1             | 17                  | 1                | 17                     | 2             | 24                  | 2               | 24                   
+BLG|CO | 16                     | 1             | 3                   | 0           | 0                 | 0                      | 0             | NULL                | 0                 | 0                       | 0                      | 0             | NULL                | 0             | 0                   | 3                      | 1             | 16                  | 1         | 16              | 0                      | 0             | NULL                | 0                | 0                      | 0                      | 0             | NULL                | 0               | 0                    
 ORM24001       | 25               | FT1          | FT1|1|||20260916|CG|LABFEE                                                     | MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260916190000||ORM^O01|ORM24001|P|2.4
 NTE|1||Message-level note
 PID|1||PAT24001||SMITH^MICHAEL||19880615|M
@@ -934,7 +638,7 @@ OBX|1|ST|PHARMSTATUS^Pharmacy Status||PENDING
 FT1|1|||20260916|CG|PHARMFEE
 CTI|TRIAL003
 ORC|NW|ORD24003
-BLG|CO | 1             | 3                   | 1           | 3                 | 1             | 6                   | 1                 | 6                       | 2             | 11                  | 2             | 11                  | 1             | 16                  | 1         | 16              | 1             | 17                  | 1                | 17                     | 2             | 24                  | 2               | 24                   
+BLG|CO | 16                     | 1             | 3                   | 0           | 0                 | 0                      | 0             | NULL                | 0                 | 0                       | 0                      | 0             | NULL                | 0             | 0                   | 3                      | 1             | 16                  | 1         | 16              | 25                     | 1             | 17                  | 0                | 0                      | 0                      | 0             | NULL                | 0               | 0                    
 ORM24001       | 26               | FT1          | FT1|2|||20260916|CG|PROCESSINGFEE                                              | MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260916190000||ORM^O01|ORM24001|P|2.4
 NTE|1||Message-level note
 PID|1||PAT24001||SMITH^MICHAEL||19880615|M
@@ -971,7 +675,7 @@ OBX|1|ST|PHARMSTATUS^Pharmacy Status||PENDING
 FT1|1|||20260916|CG|PHARMFEE
 CTI|TRIAL003
 ORC|NW|ORD24003
-BLG|CO | 1             | 3                   | 1           | 3                 | 1             | 6                   | 1                 | 6                       | 2             | 11                  | 2             | 11                  | 1             | 16                  | 1         | 16              | 1             | 17                  | 1                | 17                     | 2             | 24                  | 2               | 24                   
+BLG|CO | 16                     | 1             | 3                   | 0           | 0                 | 0                      | 0             | NULL                | 0                 | 0                       | 0                      | 0             | NULL                | 0             | 0                   | 3                      | 1             | 16                  | 1         | 16              | 26                     | 1             | 17                  | 0                | 0                      | 0                      | 0             | NULL                | 0               | 0                    
 ORM24001       | 27               | CTI          | CTI|TRIAL001                                                                   | MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260916190000||ORM^O01|ORM24001|P|2.4
 NTE|1||Message-level note
 PID|1||PAT24001||SMITH^MICHAEL||19880615|M
@@ -1008,7 +712,7 @@ OBX|1|ST|PHARMSTATUS^Pharmacy Status||PENDING
 FT1|1|||20260916|CG|PHARMFEE
 CTI|TRIAL003
 ORC|NW|ORD24003
-BLG|CO | 1             | 3                   | 1           | 3                 | 1             | 6                   | 1                 | 6                       | 2             | 11                  | 2             | 11                  | 1             | 16                  | 1         | 16              | 1             | 17                  | 1                | 17                     | 2             | 24                  | 2               | 24                   
+BLG|CO | 16                     | 1             | 3                   | 0           | 0                 | 0                      | 0             | NULL                | 0                 | 0                       | 0                      | 0             | NULL                | 0             | 0                   | 3                      | 1             | 16                  | 1         | 16              | 27                     | 1             | 17                  | 0                | 0                      | 0                      | 0             | NULL                | 0               | 0                    
 ORM24001       | 28               | CTI          | CTI|TRIAL002                                                                   | MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260916190000||ORM^O01|ORM24001|P|2.4
 NTE|1||Message-level note
 PID|1||PAT24001||SMITH^MICHAEL||19880615|M
@@ -1045,7 +749,7 @@ OBX|1|ST|PHARMSTATUS^Pharmacy Status||PENDING
 FT1|1|||20260916|CG|PHARMFEE
 CTI|TRIAL003
 ORC|NW|ORD24003
-BLG|CO | 1             | 3                   | 1           | 3                 | 1             | 6                   | 1                 | 6                       | 2             | 11                  | 2             | 11                  | 1             | 16                  | 1         | 16              | 1             | 17                  | 1                | 17                     | 2             | 24                  | 2               | 24                   
+BLG|CO | 16                     | 1             | 3                   | 0           | 0                 | 0                      | 0             | NULL                | 0                 | 0                       | 0                      | 0             | NULL                | 0             | 0                   | 3                      | 1             | 16                  | 1         | 16              | 28                     | 1             | 17                  | 0                | 0                      | 0                      | 0             | NULL                | 0               | 0                    
 ORM24001       | 29               | BLG          | BLG|CO                                                                         | MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260916190000||ORM^O01|ORM24001|P|2.4
 NTE|1||Message-level note
 PID|1||PAT24001||SMITH^MICHAEL||19880615|M
@@ -1082,7 +786,303 @@ OBX|1|ST|PHARMSTATUS^Pharmacy Status||PENDING
 FT1|1|||20260916|CG|PHARMFEE
 CTI|TRIAL003
 ORC|NW|ORD24003
-BLG|CO | 1             | 3                   | 1           | 3                 | 1             | 6                   | 1                 | 6                       | 2             | 11                  | 2             | 11                  | 1             | 16                  | 1         | 16              | 1             | 17                  | 1                | 17                     | 2             | 24                  | 2               | 24                   
+BLG|CO | 16                     | 1             | 3                   | 0           | 0                 | 0                      | 0             | NULL                | 0                 | 0                       | 0                      | 0             | NULL                | 0             | 0                   | 3                      | 1             | 16                  | 1         | 16              | 29                     | 1             | 17                  | 0                | 0                      | 0                      | 0             | NULL                | 0               | 0                    
+ORM24001       | 17               | OBR          | OBR|1|ORD24001||CBC^Complete Blood Count                                       | MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260916190000||ORM^O01|ORM24001|P|2.4
+NTE|1||Message-level note
+PID|1||PAT24001||SMITH^MICHAEL||19880615|M
+PD1|||FAMILYMED
+NTE|1||Patient-level note
+PV1|1|O|CLINIC^101^A
+PV2|||Follow-up visit
+IN1|1|BCBS|PLAN001
+IN2|EMP001
+IN3|CERT001
+IN1|2|AETNA|PLAN002
+IN2|EMP002
+GT1|1||SMITH^MICHAEL
+AL1|1||PENICILLIN
+AL1|2||PEANUTS
+ORC|NW|ORD24001
+OBR|1|ORD24001||CBC^Complete Blood Count
+NTE|1||CBC order detail note
+CTD|1|LAB^CONTACT
+DG1|1||Z00.00^General examination
+DG1|2||R53.83^Fatigue
+OBX|1|ST|ORDERSTATUS^Order Status||RECEIVED
+NTE|1||First observation note
+OBX|2|ST|PRIORITY^Priority||ROUTINE
+FT1|1|||20260916|CG|LABFEE
+FT1|2|||20260916|CG|PROCESSINGFEE
+CTI|TRIAL001
+CTI|TRIAL002
+BLG|CO
+ORC|NW|ORD24002
+RXO|AMOX500^Amoxicillin 500 MG|500|MG|500|MG|PO
+NTE|1||Take with food
+OBX|1|ST|PHARMSTATUS^Pharmacy Status||PENDING
+FT1|1|||20260916|CG|PHARMFEE
+CTI|TRIAL003
+ORC|NW|ORD24003
+BLG|CO | 16                     | 1             | 3                   | 0           | 0                 | 0                      | 0             | NULL                | 0                 | 0                       | 0                      | 0             | NULL                | 0             | 0                   | 3                      | 1             | 16                  | 1         | 16              | 0                      | 1             | 17                  | 1                | 17                     | 0                      | 0             | NULL                | 0               | 0                    
+ORM24001       | 18               | NTE          | NTE|1||CBC order detail note                                                   | MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260916190000||ORM^O01|ORM24001|P|2.4
+NTE|1||Message-level note
+PID|1||PAT24001||SMITH^MICHAEL||19880615|M
+PD1|||FAMILYMED
+NTE|1||Patient-level note
+PV1|1|O|CLINIC^101^A
+PV2|||Follow-up visit
+IN1|1|BCBS|PLAN001
+IN2|EMP001
+IN3|CERT001
+IN1|2|AETNA|PLAN002
+IN2|EMP002
+GT1|1||SMITH^MICHAEL
+AL1|1||PENICILLIN
+AL1|2||PEANUTS
+ORC|NW|ORD24001
+OBR|1|ORD24001||CBC^Complete Blood Count
+NTE|1||CBC order detail note
+CTD|1|LAB^CONTACT
+DG1|1||Z00.00^General examination
+DG1|2||R53.83^Fatigue
+OBX|1|ST|ORDERSTATUS^Order Status||RECEIVED
+NTE|1||First observation note
+OBX|2|ST|PRIORITY^Priority||ROUTINE
+FT1|1|||20260916|CG|LABFEE
+FT1|2|||20260916|CG|PROCESSINGFEE
+CTI|TRIAL001
+CTI|TRIAL002
+BLG|CO
+ORC|NW|ORD24002
+RXO|AMOX500^Amoxicillin 500 MG|500|MG|500|MG|PO
+NTE|1||Take with food
+OBX|1|ST|PHARMSTATUS^Pharmacy Status||PENDING
+FT1|1|||20260916|CG|PHARMFEE
+CTI|TRIAL003
+ORC|NW|ORD24003
+BLG|CO | 16                     | 1             | 3                   | 0           | 0                 | 0                      | 0             | NULL                | 0                 | 0                       | 0                      | 0             | NULL                | 0             | 0                   | 3                      | 1             | 16                  | 1         | 16              | 0                      | 1             | 17                  | 1                | 17                     | 0                      | 0             | NULL                | 0               | 0                    
+ORM24001       | 19               | CTD          | CTD|1|LAB^CONTACT                                                              | MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260916190000||ORM^O01|ORM24001|P|2.4
+NTE|1||Message-level note
+PID|1||PAT24001||SMITH^MICHAEL||19880615|M
+PD1|||FAMILYMED
+NTE|1||Patient-level note
+PV1|1|O|CLINIC^101^A
+PV2|||Follow-up visit
+IN1|1|BCBS|PLAN001
+IN2|EMP001
+IN3|CERT001
+IN1|2|AETNA|PLAN002
+IN2|EMP002
+GT1|1||SMITH^MICHAEL
+AL1|1||PENICILLIN
+AL1|2||PEANUTS
+ORC|NW|ORD24001
+OBR|1|ORD24001||CBC^Complete Blood Count
+NTE|1||CBC order detail note
+CTD|1|LAB^CONTACT
+DG1|1||Z00.00^General examination
+DG1|2||R53.83^Fatigue
+OBX|1|ST|ORDERSTATUS^Order Status||RECEIVED
+NTE|1||First observation note
+OBX|2|ST|PRIORITY^Priority||ROUTINE
+FT1|1|||20260916|CG|LABFEE
+FT1|2|||20260916|CG|PROCESSINGFEE
+CTI|TRIAL001
+CTI|TRIAL002
+BLG|CO
+ORC|NW|ORD24002
+RXO|AMOX500^Amoxicillin 500 MG|500|MG|500|MG|PO
+NTE|1||Take with food
+OBX|1|ST|PHARMSTATUS^Pharmacy Status||PENDING
+FT1|1|||20260916|CG|PHARMFEE
+CTI|TRIAL003
+ORC|NW|ORD24003
+BLG|CO | 16                     | 1             | 3                   | 0           | 0                 | 0                      | 0             | NULL                | 0                 | 0                       | 0                      | 0             | NULL                | 0             | 0                   | 3                      | 1             | 16                  | 1         | 16              | 0                      | 1             | 17                  | 1                | 17                     | 0                      | 0             | NULL                | 0               | 0                    
+ORM24001       | 20               | DG1          | DG1|1||Z00.00^General examination                                              | MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260916190000||ORM^O01|ORM24001|P|2.4
+NTE|1||Message-level note
+PID|1||PAT24001||SMITH^MICHAEL||19880615|M
+PD1|||FAMILYMED
+NTE|1||Patient-level note
+PV1|1|O|CLINIC^101^A
+PV2|||Follow-up visit
+IN1|1|BCBS|PLAN001
+IN2|EMP001
+IN3|CERT001
+IN1|2|AETNA|PLAN002
+IN2|EMP002
+GT1|1||SMITH^MICHAEL
+AL1|1||PENICILLIN
+AL1|2||PEANUTS
+ORC|NW|ORD24001
+OBR|1|ORD24001||CBC^Complete Blood Count
+NTE|1||CBC order detail note
+CTD|1|LAB^CONTACT
+DG1|1||Z00.00^General examination
+DG1|2||R53.83^Fatigue
+OBX|1|ST|ORDERSTATUS^Order Status||RECEIVED
+NTE|1||First observation note
+OBX|2|ST|PRIORITY^Priority||ROUTINE
+FT1|1|||20260916|CG|LABFEE
+FT1|2|||20260916|CG|PROCESSINGFEE
+CTI|TRIAL001
+CTI|TRIAL002
+BLG|CO
+ORC|NW|ORD24002
+RXO|AMOX500^Amoxicillin 500 MG|500|MG|500|MG|PO
+NTE|1||Take with food
+OBX|1|ST|PHARMSTATUS^Pharmacy Status||PENDING
+FT1|1|||20260916|CG|PHARMFEE
+CTI|TRIAL003
+ORC|NW|ORD24003
+BLG|CO | 16                     | 1             | 3                   | 0           | 0                 | 0                      | 0             | NULL                | 0                 | 0                       | 0                      | 0             | NULL                | 0             | 0                   | 3                      | 1             | 16                  | 1         | 16              | 0                      | 1             | 17                  | 1                | 17                     | 0                      | 0             | NULL                | 0               | 0                    
+ORM24001       | 21               | DG1          | DG1|2||R53.83^Fatigue                                                          | MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260916190000||ORM^O01|ORM24001|P|2.4
+NTE|1||Message-level note
+PID|1||PAT24001||SMITH^MICHAEL||19880615|M
+PD1|||FAMILYMED
+NTE|1||Patient-level note
+PV1|1|O|CLINIC^101^A
+PV2|||Follow-up visit
+IN1|1|BCBS|PLAN001
+IN2|EMP001
+IN3|CERT001
+IN1|2|AETNA|PLAN002
+IN2|EMP002
+GT1|1||SMITH^MICHAEL
+AL1|1||PENICILLIN
+AL1|2||PEANUTS
+ORC|NW|ORD24001
+OBR|1|ORD24001||CBC^Complete Blood Count
+NTE|1||CBC order detail note
+CTD|1|LAB^CONTACT
+DG1|1||Z00.00^General examination
+DG1|2||R53.83^Fatigue
+OBX|1|ST|ORDERSTATUS^Order Status||RECEIVED
+NTE|1||First observation note
+OBX|2|ST|PRIORITY^Priority||ROUTINE
+FT1|1|||20260916|CG|LABFEE
+FT1|2|||20260916|CG|PROCESSINGFEE
+CTI|TRIAL001
+CTI|TRIAL002
+BLG|CO
+ORC|NW|ORD24002
+RXO|AMOX500^Amoxicillin 500 MG|500|MG|500|MG|PO
+NTE|1||Take with food
+OBX|1|ST|PHARMSTATUS^Pharmacy Status||PENDING
+FT1|1|||20260916|CG|PHARMFEE
+CTI|TRIAL003
+ORC|NW|ORD24003
+BLG|CO | 16                     | 1             | 3                   | 0           | 0                 | 0                      | 0             | NULL                | 0                 | 0                       | 0                      | 0             | NULL                | 0             | 0                   | 3                      | 1             | 16                  | 1         | 16              | 0                      | 1             | 17                  | 1                | 17                     | 0                      | 0             | NULL                | 0               | 0                    
+ORM24001       | 22               | OBX          | OBX|1|ST|ORDERSTATUS^Order Status||RECEIVED                                    | MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260916190000||ORM^O01|ORM24001|P|2.4
+NTE|1||Message-level note
+PID|1||PAT24001||SMITH^MICHAEL||19880615|M
+PD1|||FAMILYMED
+NTE|1||Patient-level note
+PV1|1|O|CLINIC^101^A
+PV2|||Follow-up visit
+IN1|1|BCBS|PLAN001
+IN2|EMP001
+IN3|CERT001
+IN1|2|AETNA|PLAN002
+IN2|EMP002
+GT1|1||SMITH^MICHAEL
+AL1|1||PENICILLIN
+AL1|2||PEANUTS
+ORC|NW|ORD24001
+OBR|1|ORD24001||CBC^Complete Blood Count
+NTE|1||CBC order detail note
+CTD|1|LAB^CONTACT
+DG1|1||Z00.00^General examination
+DG1|2||R53.83^Fatigue
+OBX|1|ST|ORDERSTATUS^Order Status||RECEIVED
+NTE|1||First observation note
+OBX|2|ST|PRIORITY^Priority||ROUTINE
+FT1|1|||20260916|CG|LABFEE
+FT1|2|||20260916|CG|PROCESSINGFEE
+CTI|TRIAL001
+CTI|TRIAL002
+BLG|CO
+ORC|NW|ORD24002
+RXO|AMOX500^Amoxicillin 500 MG|500|MG|500|MG|PO
+NTE|1||Take with food
+OBX|1|ST|PHARMSTATUS^Pharmacy Status||PENDING
+FT1|1|||20260916|CG|PHARMFEE
+CTI|TRIAL003
+ORC|NW|ORD24003
+BLG|CO | 16                     | 1             | 3                   | 0           | 0                 | 0                      | 0             | NULL                | 0                 | 0                       | 0                      | 0             | NULL                | 0             | 0                   | 3                      | 1             | 16                  | 1         | 16              | 0                      | 1             | 17                  | 1                | 17                     | 0                      | 1             | 22                  | 1               | 22                   
+ORM24001       | 23               | NTE          | NTE|1||First observation note                                                  | MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260916190000||ORM^O01|ORM24001|P|2.4
+NTE|1||Message-level note
+PID|1||PAT24001||SMITH^MICHAEL||19880615|M
+PD1|||FAMILYMED
+NTE|1||Patient-level note
+PV1|1|O|CLINIC^101^A
+PV2|||Follow-up visit
+IN1|1|BCBS|PLAN001
+IN2|EMP001
+IN3|CERT001
+IN1|2|AETNA|PLAN002
+IN2|EMP002
+GT1|1||SMITH^MICHAEL
+AL1|1||PENICILLIN
+AL1|2||PEANUTS
+ORC|NW|ORD24001
+OBR|1|ORD24001||CBC^Complete Blood Count
+NTE|1||CBC order detail note
+CTD|1|LAB^CONTACT
+DG1|1||Z00.00^General examination
+DG1|2||R53.83^Fatigue
+OBX|1|ST|ORDERSTATUS^Order Status||RECEIVED
+NTE|1||First observation note
+OBX|2|ST|PRIORITY^Priority||ROUTINE
+FT1|1|||20260916|CG|LABFEE
+FT1|2|||20260916|CG|PROCESSINGFEE
+CTI|TRIAL001
+CTI|TRIAL002
+BLG|CO
+ORC|NW|ORD24002
+RXO|AMOX500^Amoxicillin 500 MG|500|MG|500|MG|PO
+NTE|1||Take with food
+OBX|1|ST|PHARMSTATUS^Pharmacy Status||PENDING
+FT1|1|||20260916|CG|PHARMFEE
+CTI|TRIAL003
+ORC|NW|ORD24003
+BLG|CO | 16                     | 1             | 3                   | 0           | 0                 | 0                      | 0             | NULL                | 0                 | 0                       | 0                      | 0             | NULL                | 0             | 0                   | 3                      | 1             | 16                  | 1         | 16              | 0                      | 1             | 17                  | 1                | 17                     | 0                      | 1             | 22                  | 1               | 22                   
+ORM24001       | 24               | OBX          | OBX|2|ST|PRIORITY^Priority||ROUTINE                                            | MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260916190000||ORM^O01|ORM24001|P|2.4
+NTE|1||Message-level note
+PID|1||PAT24001||SMITH^MICHAEL||19880615|M
+PD1|||FAMILYMED
+NTE|1||Patient-level note
+PV1|1|O|CLINIC^101^A
+PV2|||Follow-up visit
+IN1|1|BCBS|PLAN001
+IN2|EMP001
+IN3|CERT001
+IN1|2|AETNA|PLAN002
+IN2|EMP002
+GT1|1||SMITH^MICHAEL
+AL1|1||PENICILLIN
+AL1|2||PEANUTS
+ORC|NW|ORD24001
+OBR|1|ORD24001||CBC^Complete Blood Count
+NTE|1||CBC order detail note
+CTD|1|LAB^CONTACT
+DG1|1||Z00.00^General examination
+DG1|2||R53.83^Fatigue
+OBX|1|ST|ORDERSTATUS^Order Status||RECEIVED
+NTE|1||First observation note
+OBX|2|ST|PRIORITY^Priority||ROUTINE
+FT1|1|||20260916|CG|LABFEE
+FT1|2|||20260916|CG|PROCESSINGFEE
+CTI|TRIAL001
+CTI|TRIAL002
+BLG|CO
+ORC|NW|ORD24002
+RXO|AMOX500^Amoxicillin 500 MG|500|MG|500|MG|PO
+NTE|1||Take with food
+OBX|1|ST|PHARMSTATUS^Pharmacy Status||PENDING
+FT1|1|||20260916|CG|PHARMFEE
+CTI|TRIAL003
+ORC|NW|ORD24003
+BLG|CO | 16                     | 1             | 3                   | 0           | 0                 | 0                      | 0             | NULL                | 0                 | 0                       | 0                      | 0             | NULL                | 0             | 0                   | 3                      | 1             | 16                  | 1         | 16              | 0                      | 1             | 17                  | 1                | 17                     | 0                      | 2             | 24                  | 2               | 24                   
 ORM24001       | 30               | ORC          | ORC|NW|ORD24002                                                                | MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260916190000||ORM^O01|ORM24001|P|2.4
 NTE|1||Message-level note
 PID|1||PAT24001||SMITH^MICHAEL||19880615|M
@@ -1119,118 +1119,7 @@ OBX|1|ST|PHARMSTATUS^Pharmacy Status||PENDING
 FT1|1|||20260916|CG|PHARMFEE
 CTI|TRIAL003
 ORC|NW|ORD24003
-BLG|CO | 1             | 3                   | 1           | 3                 | 1             | 6                   | 1                 | 6                       | 2             | 11                  | 2             | 11                  | 2             | 30                  | 2         | 30              | 0             | NULL                | 0                | 0                      | 0             | NULL                | 0               | 0                    
-ORM24001       | 31               | RXO          | RXO|AMOX500^Amoxicillin 500 MG|500|MG|500|MG|PO                                | MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260916190000||ORM^O01|ORM24001|P|2.4
-NTE|1||Message-level note
-PID|1||PAT24001||SMITH^MICHAEL||19880615|M
-PD1|||FAMILYMED
-NTE|1||Patient-level note
-PV1|1|O|CLINIC^101^A
-PV2|||Follow-up visit
-IN1|1|BCBS|PLAN001
-IN2|EMP001
-IN3|CERT001
-IN1|2|AETNA|PLAN002
-IN2|EMP002
-GT1|1||SMITH^MICHAEL
-AL1|1||PENICILLIN
-AL1|2||PEANUTS
-ORC|NW|ORD24001
-OBR|1|ORD24001||CBC^Complete Blood Count
-NTE|1||CBC order detail note
-CTD|1|LAB^CONTACT
-DG1|1||Z00.00^General examination
-DG1|2||R53.83^Fatigue
-OBX|1|ST|ORDERSTATUS^Order Status||RECEIVED
-NTE|1||First observation note
-OBX|2|ST|PRIORITY^Priority||ROUTINE
-FT1|1|||20260916|CG|LABFEE
-FT1|2|||20260916|CG|PROCESSINGFEE
-CTI|TRIAL001
-CTI|TRIAL002
-BLG|CO
-ORC|NW|ORD24002
-RXO|AMOX500^Amoxicillin 500 MG|500|MG|500|MG|PO
-NTE|1||Take with food
-OBX|1|ST|PHARMSTATUS^Pharmacy Status||PENDING
-FT1|1|||20260916|CG|PHARMFEE
-CTI|TRIAL003
-ORC|NW|ORD24003
-BLG|CO | 1             | 3                   | 1           | 3                 | 1             | 6                   | 1                 | 6                       | 2             | 11                  | 2             | 11                  | 2             | 30                  | 2         | 30              | 1             | 31                  | 1                | 31                     | 0             | NULL                | 0               | 0                    
-ORM24001       | 32               | NTE          | NTE|1||Take with food                                                          | MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260916190000||ORM^O01|ORM24001|P|2.4
-NTE|1||Message-level note
-PID|1||PAT24001||SMITH^MICHAEL||19880615|M
-PD1|||FAMILYMED
-NTE|1||Patient-level note
-PV1|1|O|CLINIC^101^A
-PV2|||Follow-up visit
-IN1|1|BCBS|PLAN001
-IN2|EMP001
-IN3|CERT001
-IN1|2|AETNA|PLAN002
-IN2|EMP002
-GT1|1||SMITH^MICHAEL
-AL1|1||PENICILLIN
-AL1|2||PEANUTS
-ORC|NW|ORD24001
-OBR|1|ORD24001||CBC^Complete Blood Count
-NTE|1||CBC order detail note
-CTD|1|LAB^CONTACT
-DG1|1||Z00.00^General examination
-DG1|2||R53.83^Fatigue
-OBX|1|ST|ORDERSTATUS^Order Status||RECEIVED
-NTE|1||First observation note
-OBX|2|ST|PRIORITY^Priority||ROUTINE
-FT1|1|||20260916|CG|LABFEE
-FT1|2|||20260916|CG|PROCESSINGFEE
-CTI|TRIAL001
-CTI|TRIAL002
-BLG|CO
-ORC|NW|ORD24002
-RXO|AMOX500^Amoxicillin 500 MG|500|MG|500|MG|PO
-NTE|1||Take with food
-OBX|1|ST|PHARMSTATUS^Pharmacy Status||PENDING
-FT1|1|||20260916|CG|PHARMFEE
-CTI|TRIAL003
-ORC|NW|ORD24003
-BLG|CO | 1             | 3                   | 1           | 3                 | 1             | 6                   | 1                 | 6                       | 2             | 11                  | 2             | 11                  | 2             | 30                  | 2         | 30              | 1             | 31                  | 1                | 31                     | 0             | NULL                | 0               | 0                    
-ORM24001       | 33               | OBX          | OBX|1|ST|PHARMSTATUS^Pharmacy Status||PENDING                                  | MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260916190000||ORM^O01|ORM24001|P|2.4
-NTE|1||Message-level note
-PID|1||PAT24001||SMITH^MICHAEL||19880615|M
-PD1|||FAMILYMED
-NTE|1||Patient-level note
-PV1|1|O|CLINIC^101^A
-PV2|||Follow-up visit
-IN1|1|BCBS|PLAN001
-IN2|EMP001
-IN3|CERT001
-IN1|2|AETNA|PLAN002
-IN2|EMP002
-GT1|1||SMITH^MICHAEL
-AL1|1||PENICILLIN
-AL1|2||PEANUTS
-ORC|NW|ORD24001
-OBR|1|ORD24001||CBC^Complete Blood Count
-NTE|1||CBC order detail note
-CTD|1|LAB^CONTACT
-DG1|1||Z00.00^General examination
-DG1|2||R53.83^Fatigue
-OBX|1|ST|ORDERSTATUS^Order Status||RECEIVED
-NTE|1||First observation note
-OBX|2|ST|PRIORITY^Priority||ROUTINE
-FT1|1|||20260916|CG|LABFEE
-FT1|2|||20260916|CG|PROCESSINGFEE
-CTI|TRIAL001
-CTI|TRIAL002
-BLG|CO
-ORC|NW|ORD24002
-RXO|AMOX500^Amoxicillin 500 MG|500|MG|500|MG|PO
-NTE|1||Take with food
-OBX|1|ST|PHARMSTATUS^Pharmacy Status||PENDING
-FT1|1|||20260916|CG|PHARMFEE
-CTI|TRIAL003
-ORC|NW|ORD24003
-BLG|CO | 1             | 3                   | 1           | 3                 | 1             | 6                   | 1                 | 6                       | 2             | 11                  | 2             | 11                  | 2             | 30                  | 2         | 30              | 1             | 31                  | 1                | 31                     | 1             | 33                  | 1               | 33                   
+BLG|CO | 30                     | 1             | 3                   | 0           | 0                 | 0                      | 0             | NULL                | 0                 | 0                       | 0                      | 0             | NULL                | 0             | 0                   | 3                      | 2             | 30                  | 2         | 30              | 0                      | 0             | NULL                | 0                | 0                      | 0                      | 0             | NULL                | 0               | 0                    
 ORM24001       | 34               | FT1          | FT1|1|||20260916|CG|PHARMFEE                                                   | MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260916190000||ORM^O01|ORM24001|P|2.4
 NTE|1||Message-level note
 PID|1||PAT24001||SMITH^MICHAEL||19880615|M
@@ -1267,7 +1156,7 @@ OBX|1|ST|PHARMSTATUS^Pharmacy Status||PENDING
 FT1|1|||20260916|CG|PHARMFEE
 CTI|TRIAL003
 ORC|NW|ORD24003
-BLG|CO | 1             | 3                   | 1           | 3                 | 1             | 6                   | 1                 | 6                       | 2             | 11                  | 2             | 11                  | 2             | 30                  | 2         | 30              | 1             | 31                  | 1                | 31                     | 1             | 33                  | 1               | 33                   
+BLG|CO | 30                     | 1             | 3                   | 0           | 0                 | 0                      | 0             | NULL                | 0                 | 0                       | 0                      | 0             | NULL                | 0             | 0                   | 3                      | 2             | 30                  | 2         | 30              | 34                     | 1             | 31                  | 0                | 0                      | 0                      | 0             | NULL                | 0               | 0                    
 ORM24001       | 35               | CTI          | CTI|TRIAL003                                                                   | MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260916190000||ORM^O01|ORM24001|P|2.4
 NTE|1||Message-level note
 PID|1||PAT24001||SMITH^MICHAEL||19880615|M
@@ -1304,7 +1193,118 @@ OBX|1|ST|PHARMSTATUS^Pharmacy Status||PENDING
 FT1|1|||20260916|CG|PHARMFEE
 CTI|TRIAL003
 ORC|NW|ORD24003
-BLG|CO | 1             | 3                   | 1           | 3                 | 1             | 6                   | 1                 | 6                       | 2             | 11                  | 2             | 11                  | 2             | 30                  | 2         | 30              | 1             | 31                  | 1                | 31                     | 1             | 33                  | 1               | 33                   
+BLG|CO | 30                     | 1             | 3                   | 0           | 0                 | 0                      | 0             | NULL                | 0                 | 0                       | 0                      | 0             | NULL                | 0             | 0                   | 3                      | 2             | 30                  | 2         | 30              | 35                     | 1             | 31                  | 0                | 0                      | 0                      | 0             | NULL                | 0               | 0                    
+ORM24001       | 31               | RXO          | RXO|AMOX500^Amoxicillin 500 MG|500|MG|500|MG|PO                                | MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260916190000||ORM^O01|ORM24001|P|2.4
+NTE|1||Message-level note
+PID|1||PAT24001||SMITH^MICHAEL||19880615|M
+PD1|||FAMILYMED
+NTE|1||Patient-level note
+PV1|1|O|CLINIC^101^A
+PV2|||Follow-up visit
+IN1|1|BCBS|PLAN001
+IN2|EMP001
+IN3|CERT001
+IN1|2|AETNA|PLAN002
+IN2|EMP002
+GT1|1||SMITH^MICHAEL
+AL1|1||PENICILLIN
+AL1|2||PEANUTS
+ORC|NW|ORD24001
+OBR|1|ORD24001||CBC^Complete Blood Count
+NTE|1||CBC order detail note
+CTD|1|LAB^CONTACT
+DG1|1||Z00.00^General examination
+DG1|2||R53.83^Fatigue
+OBX|1|ST|ORDERSTATUS^Order Status||RECEIVED
+NTE|1||First observation note
+OBX|2|ST|PRIORITY^Priority||ROUTINE
+FT1|1|||20260916|CG|LABFEE
+FT1|2|||20260916|CG|PROCESSINGFEE
+CTI|TRIAL001
+CTI|TRIAL002
+BLG|CO
+ORC|NW|ORD24002
+RXO|AMOX500^Amoxicillin 500 MG|500|MG|500|MG|PO
+NTE|1||Take with food
+OBX|1|ST|PHARMSTATUS^Pharmacy Status||PENDING
+FT1|1|||20260916|CG|PHARMFEE
+CTI|TRIAL003
+ORC|NW|ORD24003
+BLG|CO | 30                     | 1             | 3                   | 0           | 0                 | 0                      | 0             | NULL                | 0                 | 0                       | 0                      | 0             | NULL                | 0             | 0                   | 3                      | 2             | 30                  | 2         | 30              | 0                      | 1             | 31                  | 1                | 31                     | 0                      | 0             | NULL                | 0               | 0                    
+ORM24001       | 32               | NTE          | NTE|1||Take with food                                                          | MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260916190000||ORM^O01|ORM24001|P|2.4
+NTE|1||Message-level note
+PID|1||PAT24001||SMITH^MICHAEL||19880615|M
+PD1|||FAMILYMED
+NTE|1||Patient-level note
+PV1|1|O|CLINIC^101^A
+PV2|||Follow-up visit
+IN1|1|BCBS|PLAN001
+IN2|EMP001
+IN3|CERT001
+IN1|2|AETNA|PLAN002
+IN2|EMP002
+GT1|1||SMITH^MICHAEL
+AL1|1||PENICILLIN
+AL1|2||PEANUTS
+ORC|NW|ORD24001
+OBR|1|ORD24001||CBC^Complete Blood Count
+NTE|1||CBC order detail note
+CTD|1|LAB^CONTACT
+DG1|1||Z00.00^General examination
+DG1|2||R53.83^Fatigue
+OBX|1|ST|ORDERSTATUS^Order Status||RECEIVED
+NTE|1||First observation note
+OBX|2|ST|PRIORITY^Priority||ROUTINE
+FT1|1|||20260916|CG|LABFEE
+FT1|2|||20260916|CG|PROCESSINGFEE
+CTI|TRIAL001
+CTI|TRIAL002
+BLG|CO
+ORC|NW|ORD24002
+RXO|AMOX500^Amoxicillin 500 MG|500|MG|500|MG|PO
+NTE|1||Take with food
+OBX|1|ST|PHARMSTATUS^Pharmacy Status||PENDING
+FT1|1|||20260916|CG|PHARMFEE
+CTI|TRIAL003
+ORC|NW|ORD24003
+BLG|CO | 30                     | 1             | 3                   | 0           | 0                 | 0                      | 0             | NULL                | 0                 | 0                       | 0                      | 0             | NULL                | 0             | 0                   | 3                      | 2             | 30                  | 2         | 30              | 0                      | 1             | 31                  | 1                | 31                     | 0                      | 0             | NULL                | 0               | 0                    
+ORM24001       | 33               | OBX          | OBX|1|ST|PHARMSTATUS^Pharmacy Status||PENDING                                  | MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260916190000||ORM^O01|ORM24001|P|2.4
+NTE|1||Message-level note
+PID|1||PAT24001||SMITH^MICHAEL||19880615|M
+PD1|||FAMILYMED
+NTE|1||Patient-level note
+PV1|1|O|CLINIC^101^A
+PV2|||Follow-up visit
+IN1|1|BCBS|PLAN001
+IN2|EMP001
+IN3|CERT001
+IN1|2|AETNA|PLAN002
+IN2|EMP002
+GT1|1||SMITH^MICHAEL
+AL1|1||PENICILLIN
+AL1|2||PEANUTS
+ORC|NW|ORD24001
+OBR|1|ORD24001||CBC^Complete Blood Count
+NTE|1||CBC order detail note
+CTD|1|LAB^CONTACT
+DG1|1||Z00.00^General examination
+DG1|2||R53.83^Fatigue
+OBX|1|ST|ORDERSTATUS^Order Status||RECEIVED
+NTE|1||First observation note
+OBX|2|ST|PRIORITY^Priority||ROUTINE
+FT1|1|||20260916|CG|LABFEE
+FT1|2|||20260916|CG|PROCESSINGFEE
+CTI|TRIAL001
+CTI|TRIAL002
+BLG|CO
+ORC|NW|ORD24002
+RXO|AMOX500^Amoxicillin 500 MG|500|MG|500|MG|PO
+NTE|1||Take with food
+OBX|1|ST|PHARMSTATUS^Pharmacy Status||PENDING
+FT1|1|||20260916|CG|PHARMFEE
+CTI|TRIAL003
+ORC|NW|ORD24003
+BLG|CO | 30                     | 1             | 3                   | 0           | 0                 | 0                      | 0             | NULL                | 0                 | 0                       | 0                      | 0             | NULL                | 0             | 0                   | 3                      | 2             | 30                  | 2         | 30              | 0                      | 1             | 31                  | 1                | 31                     | 0                      | 1             | 33                  | 1               | 33                   
 ORM24001       | 36               | ORC          | ORC|NW|ORD24003                                                                | MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260916190000||ORM^O01|ORM24001|P|2.4
 NTE|1||Message-level note
 PID|1||PAT24001||SMITH^MICHAEL||19880615|M
@@ -1341,7 +1341,7 @@ OBX|1|ST|PHARMSTATUS^Pharmacy Status||PENDING
 FT1|1|||20260916|CG|PHARMFEE
 CTI|TRIAL003
 ORC|NW|ORD24003
-BLG|CO | 1             | 3                   | 1           | 3                 | 1             | 6                   | 1                 | 6                       | 2             | 11                  | 2             | 11                  | 3             | 36                  | 3         | 36              | 0             | NULL                | 0                | 0                      | 0             | NULL                | 0               | 0                    
+BLG|CO | 36                     | 1             | 3                   | 0           | 0                 | 0                      | 0             | NULL                | 0                 | 0                       | 0                      | 0             | NULL                | 0             | 0                   | 3                      | 3             | 36                  | 3         | 36              | 0                      | 0             | NULL                | 0                | 0                      | 0                      | 0             | NULL                | 0               | 0                    
 ORM24001       | 37               | BLG          | BLG|CO                                                                         | MSH|^~\&|ORDERAPP|HOSPITAL|EASYHL7|TEST|20260916190000||ORM^O01|ORM24001|P|2.4
 NTE|1||Message-level note
 PID|1||PAT24001||SMITH^MICHAEL||19880615|M
@@ -1378,7 +1378,7 @@ OBX|1|ST|PHARMSTATUS^Pharmacy Status||PENDING
 FT1|1|||20260916|CG|PHARMFEE
 CTI|TRIAL003
 ORC|NW|ORD24003
-BLG|CO | 1             | 3                   | 1           | 3                 | 1             | 6                   | 1                 | 6                       | 2             | 11                  | 2             | 11                  | 3             | 36                  | 3         | 36              | 0             | NULL                | 0                | 0                      | 0             | NULL                | 0               | 0                    
+BLG|CO | 36                     | 1             | 3                   | 0           | 0                 | 0                      | 0             | NULL                | 0                 | 0                       | 0                      | 0             | NULL                | 0             | 0                   | 3                      | 3             | 36                  | 3         | 36              | 37                     | 0             | NULL                | 0                | 0                      | 0                      | 0             | NULL                | 0               | 0                    
 
 ================================================================================
 PATIENT
