@@ -24,6 +24,9 @@ models:
       orm:
         o01:
           +schema: orm_o01
+      dft:
+        p03:
+          +schema: dft_p03
 
     v2_2:
       oru:
@@ -32,6 +35,9 @@ models:
       orm:
         o01:
           +schema: orm_o01
+      dft:
+        p03:
+          +schema: dft_p03
 
     v2_3:
       oru:
@@ -40,6 +46,9 @@ models:
       orm:
         o01:
           +schema: orm_o01
+      dft:
+        p03:
+          +schema: dft_p03
 
     v2_3_1:
       oru:
@@ -48,6 +57,9 @@ models:
       orm:
         o01:
           +schema: orm_o01
+      dft:
+        p03:
+          +schema: dft_p03
     
     v2_4:
       oru:
@@ -56,6 +68,9 @@ models:
       orm:
         o01:
           +schema: orm_o01
+      dft:
+        p03:
+          +schema: dft_p03
 
     v2_5:
       oru:
@@ -64,6 +79,9 @@ models:
       orm:
         o01:
           +schema: orm_o01
+      dft:
+        p03:
+          +schema: dft_p03
 
     v2_6:
       oru:
@@ -72,6 +90,9 @@ models:
       orm:
         o01:
           +schema: orm_o01
+      dft:
+        p03:
+          +schema: dft_p03
 
 seeds:
   easyhl7_dev:
