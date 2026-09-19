@@ -1,0 +1,10 @@
+{{ config(materialized='table') }}
+
+{% set args = {
+    'hierarchy_ref': 'ras_o01__hierarchy__v2_3_1',
+    'version': '2.3.1',
+    'message_type': 'RAS_O01',
+    'group': 'ENCODING'
+} %}
+
+{{ easyhl7.parse_group(args) }}

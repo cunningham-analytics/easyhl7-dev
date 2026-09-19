@@ -1,0 +1,13 @@
+CONFIG DFT_P03 2.4 -> 2.4 (macros/configs/v2_4/DFT_P03.sql)
+READ   dft_p03__hierarchy__v2_4
+READ   dft_p03__common_order__v2_4
+READ   dft_p03__order__v2_4
+READ   dft_p03__observation__v2_4
+READ   dft_p03__financial__v2_4
+READ   dft_p03__financial_procedure__v2_4
+READ   dft_p03__financial_common_order__v2_4
+READ   dft_p03__financial_order__v2_4
+READ   dft_p03__financial_observation__v2_4
+READ   dft_p03__insurance__v2_4
+
+REPORT regression_reports/dft_p03__v2_4.txt
