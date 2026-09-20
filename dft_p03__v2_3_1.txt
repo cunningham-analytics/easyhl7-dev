@@ -1,7 +1,0 @@
-CONFIG DFT_P03 2.3.1 -> 2.3 (macros/configs/v2_3/DFT_P03.sql)
-READ   dft_p03__hierarchy__v2_3_1
-READ   dft_p03__financial__v2_3_1
-READ   dft_p03__financial_procedure__v2_3_1
-READ   dft_p03__insurance__v2_3_1
-
-REPORT regression_reports/dft_p03__v2_3_1.txt
