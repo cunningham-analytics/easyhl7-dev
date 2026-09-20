@@ -18,26 +18,96 @@ models:
   easyhl7_dev:
 
     v2_1:
-      +database: v2_1
-      +tags:
-        - v2_1
-      
       oru:
         r01:
           +schema: oru_r01
-          +tags:
-            - oru_r01
       orm:
         o01:
           +schema: orm_o01
-          +tags:
-            - orm_o01
+      dft:
+        p03:
+          +schema: dft_p03
+
+    v2_2:
+      oru:
+        r01:
+          +schema: oru_r01
+      orm:
+        o01:
+          +schema: orm_o01
+      dft:
+        p03:
+          +schema: dft_p03
+
+    v2_3:
+      oru:
+        r01:
+          +schema: oru_r01
+      orm:
+        o01:
+          +schema: orm_o01
+      dft:
+        p03:
+          +schema: dft_p03
+
+    v2_3_1:
+      oru:
+        r01:
+          +schema: oru_r01
+      orm:
+        o01:
+          +schema: orm_o01
+      dft:
+        p03:
+          +schema: dft_p03
+    
+    v2_4:
+      oru:
+        r01:
+          +schema: oru_r01
+      orm:
+        o01:
+          +schema: orm_o01
+      dft:
+        p03:
+          +schema: dft_p03
+
+    v2_5:
+      oru:
+        r01:
+          +schema: oru_r01
+      orm:
+        o01:
+          +schema: orm_o01
+      dft:
+        p03:
+          +schema: dft_p03
+
+    v2_6:
+      oru:
+        r01:
+          +schema: oru_r01
+      orm:
+        o01:
+          +schema: orm_o01
+      dft:
+        p03:
+          +schema: dft_p03
 
 seeds:
   easyhl7_dev:
     samples:
       v2_1:
-        +schema: raw
-
+        +schema: raw_v2_1
       v2_2:
-        +schema: raw
+        +schema: raw_v2_2
+      v2_3:
+        +schema: raw_v2_3
+      v2_3_1:
+        +schema: raw_v2_3_1
+      v2_4:
+        +schema: raw_v2_4
+      v2_5:
+        +schema: raw_v2_5
+      v2_6:
+        +schema: raw_v2_6
